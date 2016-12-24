@@ -42,8 +42,12 @@ Route::get('/adminsampah/masyarakat/{id}', 'SampahController@delete_mas');
 Route::get('/terimakasih', 'SampahController@thanks');
 Route::get('/sent', 'SampahController@sent');
 Route::get('/masuk', 'SampahController@masuk');
+Route::get('/forgets', 'SampahController@forgetSession');
 
+//Route::get('/session/put', 'SessionController@putSession');
+//Route::get('/session/get', 'SessionController@getSession');
+//Route::get('/session/forget', 'SessionController@forgetSession');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+//Auth::routes();
+//
+//Route::get('/home', 'HomeController@index');

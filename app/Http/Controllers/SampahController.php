@@ -32,10 +32,17 @@ class SampahController extends Controller
         return view('data/data', ['data' => $n, 'jasa' => $jasa, 'dummy' => $dummy] );
     }
 
-     public function admin()
+     public function admin(Request $request)
      {
-         $value = session('key');
-       return view('Admin/dashboard');
+         if ($request->session()->has('session_name'))
+         {
+             return view('Admin/dashboard');
+         }
+         else
+         {
+             return redirect('/masuk');
+         }
+
      }
 
      public function blank()
@@ -167,7 +174,7 @@ class SampahController extends Controller
         $cek = Hash::check($request->password,$jasa->password);
         if ($cek)
         {
-            $value = $request->session()->get('key');
+            $request->session()->put('session_name',$jasa->id);
             return redirect()->intended('/adminsampah');
         }
         else
@@ -175,6 +182,12 @@ class SampahController extends Controller
             return redirect('/masuk');
         }
 
+    }
+
+    public function forgetSession(Request $request)
+    {
+        $request->session()->forget('session_name');
+        return redirect('/masuk');
     }
 
     public function thanks()
@@ -187,8 +200,16 @@ class SampahController extends Controller
         return view('sent');
     }
 
-    public function masuk()
+    public function masuk(Request $request)
     {
-        return view('Admin/login');
+        if ($request->session()->has('session_name'))
+        {
+            return redirect('/adminsampah');
+        }
+        else
+        {
+            return view('Admin/login');
+        }
+
     }
 }
