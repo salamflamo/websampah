@@ -80,6 +80,9 @@
         <div class="imgcontainer">
             <img src="/vendor/images/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
+        <div align="center" class="container">
+            <h3>Login Admin</h3>
+        </div>
         <div class="container">
             <label><b>Username</b></label>
             <input type="text" placeholder="Email" name="email" required>

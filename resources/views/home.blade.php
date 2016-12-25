@@ -186,19 +186,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="id01" class="modal">
 						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 						<!-- Modal Content -->
-						<form class="modal-content animate" action="action_page.php">
+						<form class="modal-content animate" action="/masverif" method="post">
 							<div style="padding: 12px 20px; background-color:#f1f1f1">
 								<h2>Login Penyewa Jasa..</h2>
 							</div>
 							<div class="container">
 								<br>
-								<input type="text" placeholder="Username" name="uname" required>
+								<input type="text" placeholder="Email" name="email" required>
 								<br>
-								<input type="password" placeholder="Password" name="psw" required>
+								<input type="password" placeholder="Password" name="password" required>
 								<br>
-								<button type="submit">Login</button>
+								<button type="submit" name="submit">Login</button>
 								<br>
 								<input type="checkbox" checked="checked"> Remember me
+								{{csrf_field()}}
 							</div>
 							<div style="padding: 12px 20px; background-color:#f1f1f1">
 								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>

@@ -16,57 +16,7 @@ use App\Models\Menyampah;
 class SampahController extends Controller
 {
 
-    public function index()
-    {
-        $koding = 'h1{color: #2ab27b}';
-        $dummy = dummy::all();
-
-        return view('data/coba', ['koding' => $koding, 'dummy' => $dummy ]);
-    }
-
-    public function data($id)
-    {
-        $n = 'Sesuatu yah ';
-        $jasa = 'Fiona';
-        $dummy = dummy::find($id);
-        return view('data/data', ['data' => $n, 'jasa' => $jasa, 'dummy' => $dummy] );
-    }
-
-     public function admin(Request $request)
-     {
-         if ($request->session()->has('session_name'))
-         {
-             return view('Admin/dashboard');
-         }
-         else
-         {
-             return redirect('/masuk');
-         }
-
-     }
-
-     public function blank()
-     {
-       return view('Admin/blank');
-     }
-
-    public function table()
-    {
-        $jasa = Jasa::all();
-        return view('Admin/table', ['jasa' => $jasa]);
-    }
-
-    public function masyarakat()
-    {
-        $mas = Masyarakat::all();
-        return view('Admin/masyarakat', ['mas' => $mas]);
-    }
-
-    public function register()
-    {
-        return view('Admin/register');
-    }
-
+    //insert sebelah sini
     public function create(Request $request)
     {
         $jasa = new Jasa;
@@ -79,11 +29,6 @@ class SampahController extends Controller
         $jasa->foto = $request->foto;
         $jasa->save();
         return redirect('/adminsampah/table');
-    }
-
-    public function register_mas()
-    {
-        return view('Admin/register_mas');
     }
 
     public function create_mas(Request $request)
@@ -100,31 +45,8 @@ class SampahController extends Controller
         return redirect('/adminsampah/masyarakat');
     }
 
-    public function daftar(Request $request)
-    {
-        $mas = new Masyarakat;
-        $mas->nama = $request->nama;
-        $mas->email = $request->email;
-        $mas->password = Hash::make($request->password);
-        $mas->nope = $request->nope;
-        $mas->alamat = $request->alamat;
-        $mas->kabkot = $request->kabkot;
-//        $mas->foto = $request->foto;
-        $mas->save();
-        return redirect('/terimakasih#thanks');
-    }
 
-    public function edit($id)
-    {
-        $jasa = Jasa::find($id);
-        return view('Admin/edit', ['jasa' => $jasa]);
-    }
-
-    public function edit_mas($id)
-    {
-        $mas = Masyarakat::find($id);
-        return view('Admin/edit_mas', ['mas' => $mas]);
-    }
+    //update sebelah sini
 
     public function update(Request $request, $id)
     {
@@ -154,6 +76,83 @@ class SampahController extends Controller
         return redirect('/adminsampah/masyarakat');
     }
 
+
+    //select data sebelah sini
+
+    public function table(Request $request)
+    {
+        $jasa = Jasa::all();
+        if ($request->session()->has('session_name'))
+        {
+            return view('Admin/table', ['jasa' => $jasa]);
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+    }
+
+    public function masyarakat(Request $request)
+    {
+        $mas = Masyarakat::all();
+        if ($request->session()->has('session_name'))
+        {
+            return view('Admin/masyarakat', ['mas' => $mas]);
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+
+    }
+
+    public function edit(Request $request, $id)
+    {
+        $jasa = Jasa::find($id);
+        if ($request->session()->has('session_name'))
+        {
+            return view('Admin/edit', ['jasa' => $jasa]);
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+
+    }
+
+    public function edit_mas(Request $request, $id)
+    {
+        $mas = Masyarakat::find($id);
+        if ($request->session()->has('session_name'))
+        {
+            return view('Admin/edit_mas', ['mas' => $mas]);
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+
+    }
+
+    public function verif(Request $request)
+    {
+        $jasa = DB::table('Jasa')->where('email',$request->email)->first();
+        $cek = Hash::check($request->password,$jasa->password);
+        if ($cek)
+        {
+            $request->session()->put('session_name',$jasa->id);
+            return redirect('/adminsampah');
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+
+    }
+
+
+    //delete data
+
     public function delete_jasa($id)
     {
         $jasa = Jasa::find($id);
@@ -168,14 +167,50 @@ class SampahController extends Controller
         return redirect('/adminsampah/masyarakat');
     }
 
-    public function verif(Request $request)
+
+    //return view biasa
+
+
+     public function admin(Request $request)
+     {
+         if ($request->session()->has('session_name'))
+         {
+             return view('Admin/dashboard');
+         }
+         else
+         {
+             return redirect('/masuk');
+         }
+
+     }
+
+     public function blank()
+     {
+       return view('Admin/blank');
+     }
+
+
+
+    public function register(Request $request)
     {
-        $jasa = DB::table('Jasa')->where('email',$request->email)->first();
-        $cek = Hash::check($request->password,$jasa->password);
-        if ($cek)
+
+        if ($request->session()->has('session_name'))
         {
-            $request->session()->put('session_name',$jasa->id);
-            return redirect()->intended('/adminsampah');
+            return view('Admin/register');
+        }
+        else
+        {
+            return redirect('/masuk');
+        }
+    }
+
+
+
+    public function register_mas(Request $request)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            return view('Admin/register_mas');
         }
         else
         {
@@ -212,4 +247,24 @@ class SampahController extends Controller
         }
 
     }
+}
+
+
+
+//tidak dipakai
+/*
+public function index()
+{
+    $koding = 'h1{color: #2ab27b}';
+    $dummy = dummy::all();
+
+    return view('data/coba', ['koding' => $koding, 'dummy' => $dummy ]);
+}
+
+public function data($id)
+{
+    $n = 'Sesuatu yah ';
+    $jasa = 'Fiona';
+    $dummy = dummy::find($id);
+    return view('data/data', ['data' => $n, 'jasa' => $jasa, 'dummy' => $dummy] );
 }

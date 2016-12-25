@@ -1,4 +1,7 @@
 @extends('Admin.admin')
+@section('title', 'Halaman Admin');
+@section('link', '/adminsampah');
+@section('logout','/forgets');
 @section('dashboard')
 <div id="page-wrapper" >
     <div id="page-inner">
@@ -12,7 +15,7 @@
         <div class="row">
             <div class="col-lg-12 ">
                 <div class="alert alert-info">
-                     <strong>Welcome Jhon Doe ! </strong> You Have No pending Task For Today.
+                     <strong>Welcome ! </strong> You Have No pending Task For Today.
                 </div>
 
             </div>

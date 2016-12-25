@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Admin</title>
+    <title>@yield('title')</title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -32,7 +32,7 @@
                 </div>
 
                 <span class="logout-spn" >
-                  <a href="/forgets" style="color:#fff;">LOGOUT</a>
+                  <a href="@yield('logout')" style="color:#fff;">LOGOUT</a>
 
                 </span>
             </div>
@@ -45,7 +45,7 @@
 
 
                     <li class="active-link">
-                        <a href="/adminsampah" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                        <a href="@yield('link')" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
                     </li>
 
 
