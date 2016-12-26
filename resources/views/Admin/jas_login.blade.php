@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Admin</title>
+        <title>Login Jasa</title>
         <style>
             /* Bordered form */
             form {
@@ -76,7 +76,7 @@
         </style>
     </head>
     <body>
-    <form action="/verif" method="post">
+    <form action="/jasadmin/verif" method="post">
         <div class="imgcontainer">
             <img src="/vendor/images/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
@@ -91,7 +91,7 @@
             <input type="password" placeholder="Password" name="password" required>
             {{csrf_field()}}
             <input type="submit" name="submit" value="Login">
-            <input type="checkbox" checked="checked"> Remember me
+
         </div>
 
         <div class="container" style="background-color:#f1f1f1">

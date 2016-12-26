@@ -55,11 +55,26 @@ class MasController extends Controller
 
     public function sunting(Request $request)
     {
-        $id = $request->session()->get('mas_session');
-        $mas = Masyarakat::find($id);
+
         if ($request->session()->has('mas_session'))
         {
+            $id = $request->session()->get('mas_session');
+            $mas = Masyarakat::find($id);
             return view('Admin/masprofil',['mas' => $mas]);
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+
+    public function mas_table(Request $request)
+    {
+        if($request->session()->has('mas_session'))
+        {
+            $id = $request->session()->get('mas_session');
+            $trans = Menyampah::where('id_mas', $id)->get();
+            return view('Admin/mas_table', ['trans' => $trans]);
         }
         else
         {
@@ -82,10 +97,11 @@ class MasController extends Controller
 
     public function pesan(Request $request)
     {
-        $massession = $request->session()->get('mas_session');
-        $mass = Masyarakat::find($massession);
+
         if ($request->session()->has('mas_session'))
         {
+            $massession = $request->session()->get('mas_session');
+            $mass = Masyarakat::find($massession);
             return view('Admin/pesan',['mass' => $mass]);
         }
         else

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Jasa;
 use App\Models\Masyarakat;
 use App\Models\Menyampah;
+use App\Models\Admin;
 
 class SampahController extends Controller
 {
@@ -81,27 +82,29 @@ class SampahController extends Controller
 
     public function table(Request $request)
     {
-        $jasa = Jasa::all();
+
         if ($request->session()->has('session_name'))
         {
+            $jasa = Jasa::all();
             return view('Admin/table', ['jasa' => $jasa]);
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
     }
 
     public function masyarakat(Request $request)
     {
-        $mas = Masyarakat::all();
+
         if ($request->session()->has('session_name'))
         {
+            $mas = Masyarakat::all();
             return view('Admin/masyarakat', ['mas' => $mas]);
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
 
     }
@@ -115,7 +118,7 @@ class SampahController extends Controller
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
 
     }
@@ -129,23 +132,23 @@ class SampahController extends Controller
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
 
     }
 
     public function verif(Request $request)
     {
-        $jasa = DB::table('Jasa')->where('email',$request->email)->first();
-        $cek = Hash::check($request->password,$jasa->password);
-        if ($cek)
-        {
-            $request->session()->put('session_name',$jasa->id);
+        $admin = DB::table('Admin')->where('id',2)->first();
+        $email = $admin->email;
+        $password = $admin->password;
+        // $cek = Hash::check($request->password, $a);
+        // dd([Hash::make($request->password),$a]);
+        if (($request->email == $email)&&($request->password == $password)) {
+            $request->session()->put('session_name', 'superadmin');
             return redirect('/adminsampah');
-        }
-        else
-        {
-            return redirect('/masuk');
+        } else {
+            return redirect('/masukadmin');
         }
 
     }
@@ -179,7 +182,7 @@ class SampahController extends Controller
          }
          else
          {
-             return redirect('/masuk');
+             return redirect('/masukadmin');
          }
 
      }
@@ -200,7 +203,7 @@ class SampahController extends Controller
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
     }
 
@@ -214,7 +217,7 @@ class SampahController extends Controller
         }
         else
         {
-            return redirect('/masuk');
+            return redirect('/masukadmin');
         }
 
     }
@@ -222,7 +225,7 @@ class SampahController extends Controller
     public function forgetSession(Request $request)
     {
         $request->session()->forget('session_name');
-        return redirect('/masuk');
+        return redirect('/masukadmin');
     }
 
     public function thanks()

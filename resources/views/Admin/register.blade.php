@@ -1,4 +1,7 @@
 @extends('Admin.admin')
+@section('title','Halaman Admin');
+@section('link', '/adminsampah');
+@section('logout','/forgets')
 @section('dashboard')
     <div id="page-wrapper" >
         <div id="page-inner">
