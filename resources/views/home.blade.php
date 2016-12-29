@@ -15,17 +15,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="/vendor/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="/vendor/css/style.css" rel="stylesheet" type="text/css" media="all" />
- <link rel='stylesheet' type='text/css' href='/vendor/css/jquery.easy-gallery.css' />
+<link href={{URL::asset('vendor-sampah/css/bootstrap.css')}} rel="stylesheet" type="text/css" media="all" />
+<link href={{URL::asset('vendor-sampah/css/style.css')}} rel="stylesheet" type="text/css" media="all" />
+ <link rel='stylesheet' type='text/css' href={{URL::asset('vendor-sampah/css/jquery.easy-gallery.css')}} />
 <!-- js -->
-<script type="text/javascript" src="/vendor/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src={{URL::asset('vendor-sampah/js/jquery-2.1.4.min.js')}}></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="/vendor/js/move-top.js"></script>
-<script type="text/javascript" src="/vendor/js/easing.js"></script>
+<script type="text/javascript" src={{URL::asset('vendor-sampah/js/move-top.js')}}></script>
+<script type="text/javascript" src={{URL::asset('vendor-sampah/js/easing.js')}}></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){
@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	});
 </script>
 <!-- start-smoth-scrolling -->
-	<link href="/vendor/css/login.css" rel="stylesheet" type="text/css">
+	<link href={{URL::asset('vendor-sampah/css/login.css')}} rel="stylesheet" type="text/css">
 
 </head>
 
@@ -186,7 +186,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div id="id01" class="modal">
 						<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 						<!-- Modal Content -->
-						<form class="modal-content animate" action="/masverif" method="post">
+						<form class="modal-content animate" role="form" action={{url('/masverif')}} method="post">
 							<div style="padding: 12px 20px; background-color:#f1f1f1">
 								<h2>Login Penyewa Jasa..</h2>
 							</div>
@@ -231,14 +231,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="mail-foot">
 				<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:sekretariat@doscom.org">sekretariat@doscom.org</a>
 			</div>
+			<div class="mail-grids">
+				<a class="btn btn-default" href='{{url('/masuk')}}'>Masuk Jasa</a>
+				<a class="btn btn-default" href='{{url('/masukadmin')}}'>Masuk Admin</a>
+			</div>
 		</div>
 		<div class="copy-right">
 			<p>Made with &hearts; by Dinus Open Source Community | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 		</div>
 	</div>
+
 <!-- //footer -->
 <!-- for bootstrap working -->
-	<script src="/vendor/js/bootstrap.js"></script>
+	<script src={{URL::asset('vendor-sampah/js/bootstrap.js')}}></script>
 <!-- //for bootstrap working -->
 <!-- here stars scrolling icon -->
 	<script type="text/javascript">

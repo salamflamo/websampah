@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title')</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href={{URL::asset('assets/css/bootstrap.css')}} rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href={{URL::asset('assets/css/font-awesome.css')}} rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="/assets/css/custom.css" rel="stylesheet" />
-    <link href="/vendor/css/style.css" rel="stylesheet" />
-    <link href="/vendor/css/bootstrap.css" rel="stylesheet" />
+    <link href={{URL::asset('assets/css/custom.css')}} rel="stylesheet" />
+    <link href={{URL::asset('vendor-sampah/css/style.css')}} rel="stylesheet" />
+    <link href={{URL::asset('vendor-sampah/css/bootstrap.css')}} rel="stylesheet" />
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
@@ -45,7 +45,7 @@
 
 
                     <li class="active-link">
-                        <a href="@yield('link')" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                        <a href={{url('/jasadmin')}} ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
                     </li>
 
 
@@ -91,11 +91,11 @@
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <script src={{URL::asset('assets/js/jquery-1.10.2.js')}}></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src={{URL::asset('assets/js/bootstrap.min.js')}}></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="/assets/js/custom.js"></script>
+    <script src={{URL::asset('assets/js/custom.js')}}></script>
 
 
 </body>
