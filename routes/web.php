@@ -57,6 +57,7 @@ Route::get('/adminsampah/masyarakat/{id}', 'SampahController@delete_mas');
 Route::get('/masukadmin', 'SampahController@masuk');
 Route::get('/forgets', 'SampahController@forgetSession');
 Route::get('/niceadmin', 'SampahController@NiceAdmin');
+Route::get('/niceadmin/tables', 'SampahController@Tables');
 
 
 /* punya jasa */

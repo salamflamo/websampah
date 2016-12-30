@@ -253,7 +253,12 @@ class SampahController extends Controller
 
     public function NiceAdmin()
     {
-        return view('NiceAdmin/master');
+        return view('NiceAdmin/dashboard');
+    }
+
+    public function Tables()
+    {
+        return view('NiceAdmin/basic_table');
     }
 }
 
