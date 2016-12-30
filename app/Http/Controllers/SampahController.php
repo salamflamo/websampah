@@ -250,6 +250,11 @@ class SampahController extends Controller
         }
 
     }
+
+    public function NiceAdmin()
+    {
+        return view('NiceAdmin/master');
+    }
 }
 
 

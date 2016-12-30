@@ -25,10 +25,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo.png" />
-
+                        <img src="{{url('assets/img/logo.png')}}" />
                     </a>
-
                 </div>
 
                 <span class="logout-spn" >
