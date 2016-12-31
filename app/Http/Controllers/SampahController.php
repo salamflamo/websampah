@@ -2,23 +2,45 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengepul;
 use Illuminate\Http\Request;
 use App\Models\dummy;
-
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\Jasa;
 use App\Models\Masyarakat;
 use App\Models\Menyampah;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Input;
 
 class SampahController extends Controller
 {
 
     //insert sebelah sini
     public function create(Request $request)
+    {
+        $jasa = new Masyarakat;
+        $jasa->nama = $request->nama;
+        $jasa->email = $request->email;
+        $jasa->password = Hash::make($request->password);
+        $jasa->nope = $request->nope;
+        $jasa->alamat = $request->alamat;
+        $jasa->kabkot = $request->kabkot;
+
+        $file = $request->file('image');
+        $filename = $file->getClientOriginalName();
+        $request->file('image')->move('images', $filename);
+
+        $jasa->foto = $filename;
+        $jasa->save();
+        return redirect('/adminsampah/table');
+    }
+
+    public function create_jasa(Request $request)
     {
         $jasa = new Jasa;
         $jasa->nama = $request->nama;
@@ -27,9 +49,33 @@ class SampahController extends Controller
         $jasa->nope = $request->nope;
         $jasa->alamat = $request->alamat;
         $jasa->kabkot = $request->kabkot;
-        $jasa->foto = $request->foto;
+
+        $file = $request->file('image');
+        $filename = $file->getClientOriginalName();
+        $request->file('image')->move('images', $filename);
+
+        $jasa->foto = $filename;
         $jasa->save();
         return redirect('/adminsampah/table');
+    }
+
+    public function create_pengepul(Request $request)
+    {
+        $jasa = new Pengepul;
+        $jasa->nama = $request->nama;
+        $jasa->email = $request->email;
+        $jasa->password = Hash::make($request->password);
+        $jasa->nope = $request->nope;
+        $jasa->alamat = $request->alamat;
+        $jasa->kabkot = $request->kabkot;
+
+        $file = $request->file('image');
+        $filename = $file->getClientOriginalName();
+        $request->file('image')->move('images', $filename);
+
+        $jasa->foto = $filename;
+        $jasa->save();
+        return redirect('/adminsampah/table#pengepul');
     }
 
     public function create_mas(Request $request)
@@ -86,7 +132,9 @@ class SampahController extends Controller
         if ($request->session()->has('session_name'))
         {
             $jasa = Jasa::all();
-            return view('Admin/table', ['jasa' => $jasa]);
+            $masyarakat = Masyarakat::all();
+            $pengepul = Pengepul::all();
+            return view('NiceAdmin/basic_table', ['jasa' => $jasa, 'masyarakat' => $masyarakat, 'pengepul' => $pengepul]);
         }
         else
         {
@@ -178,7 +226,7 @@ class SampahController extends Controller
      {
          if ($request->session()->has('session_name'))
          {
-             return view('Admin/dashboard');
+             return view('NiceAdmin/dashboard');
          }
          else
          {
@@ -199,7 +247,7 @@ class SampahController extends Controller
 
         if ($request->session()->has('session_name'))
         {
-            return view('Admin/register');
+            return view('NiceAdmin/forms');
         }
         else
         {
@@ -246,19 +294,30 @@ class SampahController extends Controller
         }
         else
         {
-            return view('Admin/login');
+            return view('NiceAdmin/login');
         }
 
     }
 
-    public function NiceAdmin()
+    public function NiceAdmin(Request $request)
     {
-        return view('NiceAdmin/dashboard');
+        if ($request->session()->has('session_name'))
+            return view('NiceAdmin/dashboard');
     }
 
-    public function Tables()
+    public function Tables(Request $request)
     {
         return view('NiceAdmin/basic_table');
+    }
+
+    public function Forms(Request $request)
+    {
+        return view('NiceAdmin/forms');
+    }
+
+    public function Posting(Request $request)
+    {
+        return view('NiceAdmin/posting');
     }
 }
 

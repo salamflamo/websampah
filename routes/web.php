@@ -28,6 +28,8 @@ Route::put('/masadmin/sunting/{id}', 'MasController@kirim_sunting');
 
 //Route menggunakan post
 Route::post('/adminsampah/create', 'SampahController@create');
+Route::post('/adminsampah/createjasa', 'SampahController@create_jasa');
+Route::post('/adminsampah/createpengepul', 'SampahController@create_pengepul');
 Route::post('/adminsampah/create_mas', 'SampahController@create_mas');
 Route::post('/verif', 'SampahController@verif');
 
@@ -58,6 +60,8 @@ Route::get('/masukadmin', 'SampahController@masuk');
 Route::get('/forgets', 'SampahController@forgetSession');
 Route::get('/niceadmin', 'SampahController@NiceAdmin');
 Route::get('/niceadmin/tables', 'SampahController@Tables');
+Route::get('/niceadmin/forms', 'SampahController@Forms');
+Route::get('/niceadmin/posting', 'SampahController@Posting');
 
 
 /* punya jasa */
