@@ -28,6 +28,7 @@
                                            <textarea class="form-control ckeditor" name="artikel" rows="10"></textarea>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="oleh" value="Admin">
                                     <div class="form-group">
                                         <div class="col-sm-4">
                                             <button type="submit" name="submit" class="btn btn-primary">Posting</button>

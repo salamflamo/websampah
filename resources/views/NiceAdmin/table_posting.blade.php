@@ -34,7 +34,7 @@
                                     <br>
                                     {{$post->artikel}}
                                     <br>
-                                    <p>Dibuat Pada : {{$post->created_at}}</p>
+                                    <p>Dibuat Pada : {{$post->created_at}} oleh : {{$post->oleh}}</p>
                                 </div>
                             </div>
                             <br>

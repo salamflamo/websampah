@@ -17,25 +17,24 @@
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box blue-bg">
                     <i class="fa fa-hand-o-up"></i>
-                    <div class="count">6.674</div>
+                    <div class="count">{{$member}}</div>
                     <div class="title">Member</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box brown-bg">
                     <i class="fa fa-trash-o"></i>
-                    <div class="count">7.538</div>
+                    <div class="count">{{$jummenyampah}}</div>
                     <div class="title">Menyampah</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="info-box dark-bg">
                     <i class="fa fa-truck"></i>
-                    <div class="count">4.362</div>
+                    <div class="count">{{$jummengepul}}</div>
                     <div class="title">Mengepul</div>
                 </div><!--/.info-box-->
             </div><!--/.col-->
-
         </div>
         <div class="row">
             <div class="col-lg-8">
@@ -63,9 +62,9 @@
                                         <tr>
                                             <th><i class="icon_profile"></i> Berat</th>
                                             <th><i class="icon_pin_alt"></i> Daerah</th>
-                                            <th><i class="icon_cogs"></i> Penyewa</th>
-                                            <th><i class="icon_cogs"></i> Pengambil</th>
-                                            <th><i class="icon_cogs"></i> Waktu</th>
+                                            <th><i class="icon_profile"></i> Penyewa</th>
+                                            <th><i class="icon_profile"></i> Pengambil</th>
+                                            <th><i class="icon_clock_alt"></i> Waktu</th>
                                         </tr>
                                         @foreach($menyampah as $sampah)
                                         <tr>
@@ -105,10 +104,11 @@
                                         <tbody>
                                         <tr>
                                             <th><i class="icon_profile"></i> Jenis Sampah</th>
-                                            <th><i class="icon_pin_alt"></i> Berat</th>
-                                            <th><i class="icon_cogs"></i> Pemesan</th>
-                                            <th><i class="icon_cogs"></i> Pengepul</th>
-                                            <th><i class="icon_cogs"></i> Waktu</th>
+                                            <th><i class="icon_box-selected"></i> Berat</th>
+                                            <th><i class="icon_profile"></i> Pemesan</th>
+                                            <th><i class="icon_profile"></i> Pengepul</th>
+                                            <th><i class="icon_cogs"></i> Status</th>
+                                            <th><i class="icon_clock_alt"></i> Waktu</th>
                                         </tr>
                                         @foreach($mengepul as $peng)
                                             <tr>
@@ -116,6 +116,7 @@
                                                 <td>{{$peng->berat}} Kg</td>
                                                 <td>{{$peng->oleh}}</td>
                                                 <td>{{$peng->namap}}</td>
+                                                <td>{{$peng->status}}</td>
                                                 <td>{{$peng->created_at}}</td>
                                             </tr>
                                         @endforeach

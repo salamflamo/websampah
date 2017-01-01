@@ -83,12 +83,12 @@ class SampahController extends Controller
     {
         $posting = new Artikel;
         $posting->judul = $request->judul;
-
         $file = $request->file('image');
         $filename = $file->getClientOriginalName();
         $request->file('image')->move('imageartikel', $filename);
         $posting->gambar = $filename;
         $posting->artikel = $request->artikel;
+        $posting->oleh = $request->oleh;
         $posting->save();
         return redirect('/adminsampah/daftarposting');
     }
@@ -174,9 +174,11 @@ class SampahController extends Controller
 
         if ($request->session()->has('session_name'))
         {
-            $jasa = Jasa::all();
-            $masyarakat = Masyarakat::all();
-            $pengepul = Pengepul::all();
+//            $jasa = Jasa::all();
+            $jasa = DB::table('Jasa')->paginate(6);
+            $masyarakat = DB::table('Masyarakat')->paginate(6);
+//            $pengepul = Pengepul::all();
+            $pengepul = DB::table('Pengepul')->paginate(6);
             return view('NiceAdmin/basic_table', ['jasa' => $jasa, 'masyarakat' => $masyarakat, 'pengepul' => $pengepul]);
         }
         else
@@ -290,11 +292,15 @@ class SampahController extends Controller
                         ->join('Jasa','Menyampah.id_jas','=','Jasa.id')
                         ->select('Menyampah.*', 'Masyarakat.namam','Jasa.namaj')
                         ->get();
+            $jummenyampah = Menyampah::where('status', 'sudah')->count();
             $mengepul = DB::table('Mengepul')
                         ->join('Pengepul', 'Mengepul.id_pengepul','=','Pengepul.id')
                         ->select('Mengepul.*','Pengepul.namap')
                         ->get();
-            return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul]);
+            $jummengepul = Mengepul::where('status', 'Lunas')->count();
+            $member = Masyarakat::all()->count() + Jasa::all()->count() + Pengepul::all()->count();
+            return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul, 
+                'member' => $member, 'jummenyampah' => $jummenyampah, 'jummengepul' => $jummengepul]);
         }
         else
         {
