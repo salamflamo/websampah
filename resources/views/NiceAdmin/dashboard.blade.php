@@ -63,10 +63,6 @@
                             <ul class="chats">
                                 @foreach($komen as $komentar)
                                 <li class="by-other">
-                                    <!-- Use the class "pull-right" in avatar -->
-                                    {{--<div class="avatar pull-right">--}}
-                                        {{--<img src="{{URL::asset('nice-assets/img/user22.png')}}" alt=""/>--}}
-                                    {{--</div>--}}
                                     <div class="chat-content">
                                         <!-- In the chat meta, first include "time" then "name" -->
                                         <div class="chat-meta">{{$komentar->created_at}} <span class="pull-right">{{$komentar->nama}}</span></div>

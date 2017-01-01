@@ -39,6 +39,13 @@
                             </div>
                             <br>
                         @endforeach
+                            <section class="panel">
+                                <div class="panel-body">
+                                    <div class="text-center">
+                                        {{$posting->links()}}
+                                    </div>
+                                </div>
+                            </section>
                     </div>
                 </section>
             </div>

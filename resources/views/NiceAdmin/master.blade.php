@@ -143,6 +143,7 @@
       @yield('tables')
       @yield('form')
       @yield('posting')
+      @yield('biografi')
           <div class="text-center">
           <div class="credits">
                 <!-- 

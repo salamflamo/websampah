@@ -45,7 +45,7 @@
                                         </tr>
                                         @foreach($masyarakat as $mas)
                                         <tr>
-                                            <td>{{$mas->namam}}</td>
+                                            <td><a href="/adminsampah/viewmas/{{$mas->id}}">{{$mas->namam}}</a> </td>
                                             <td>{{$mas->kabkot}}</td>
                                             <td>
                                                 <div class="btn-group">
@@ -81,7 +81,7 @@
                                         </tr>
                                         @foreach($jasa as $jas)
                                         <tr>
-                                            <td>{{$jas->namaj}}</td>
+                                            <td><a href="/adminsampah/viewjas/{{$jas->id}}">{{$jas->namaj}}</a> </td>
                                             <td>{{$jas->kabkot}}</td>
                                             <td>
                                                 <div class="btn-group">

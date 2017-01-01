@@ -232,7 +232,8 @@ class SampahController extends Controller
     {
         if ($request->session()->has('session_name'))
         {
-            $posting = Artikel::all();
+//            $posting = Artikel::all();
+            $posting = DB::table('Artikel')->paginate(2);
             return view('NiceAdmin/table_posting', ['posting' => $posting]);
         }
 
@@ -301,6 +302,36 @@ class SampahController extends Controller
             $member = Masyarakat::all()->count() + Jasa::all()->count() + Pengepul::all()->count();
             return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul, 
                 'member' => $member, 'jummenyampah' => $jummenyampah, 'jummengepul' => $jummengepul]);
+        }
+        else
+        {
+            return redirect('/masukadmin');
+        }
+    }
+
+    public function DetailMas(Request $request, $id)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            $views = Masyarakat::find($id);
+            $nama = $views->namam;
+            $punya = 1;
+            return view('NiceAdmin/biografi', ['views' => $views, 'nama' => $nama, 'punya' => $punya]);
+        }
+        else
+        {
+            return redirect('/masukadmin');
+        }
+    }
+
+    public function DetailJas(Request $request, $id)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            $views = Jasa::find($id);
+            $nama = $views->namaj;
+            $punya = 2;
+            return view('NiceAdmin/biografi', ['views' => $views, 'nama' => $nama, 'punya' => $punya]);
         }
         else
         {

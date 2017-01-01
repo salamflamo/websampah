@@ -62,6 +62,9 @@ Route::get('/adminsampah/posting', 'SampahController@Posting'); //untuk masuk ha
 Route::get('/adminsampah/transaksi', 'SampahController@transaksi');  //melihat semua transaksi
 Route::get('/masukadmin', 'SampahController@masuk'); //login sebagai superadmin
 Route::get('/forgets', 'SampahController@forgetSession'); //ini untuk logoout
+Route::get('/adminsampah/viewmas/{id}', 'SampahController@DetailMas'); //ini untuk view detail
+Route::get('/adminsampah/viewjas/{id}', 'SampahController@DetailJas'); //ini untuk view detail
+
 
 
 /* punya jasa */
