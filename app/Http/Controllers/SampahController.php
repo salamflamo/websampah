@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mengepul;
+use App\Models\Menyampah;
 use App\Models\Pengepul;
 use Illuminate\Http\Request;
 
@@ -22,27 +24,27 @@ class SampahController extends Controller
     //insert sebelah sini
     public function create(Request $request)
     {
-        $jasa = new Masyarakat;
-        $jasa->nama = $request->nama;
-        $jasa->email = $request->email;
-        $jasa->password = Hash::make($request->password);
-        $jasa->nope = $request->nope;
-        $jasa->alamat = $request->alamat;
-        $jasa->kabkot = $request->kabkot;
+        $mas = new Masyarakat;
+        $mas->namam = $request->nama;
+        $mas->email = $request->email;
+        $mas->password = Hash::make($request->password);
+        $mas->nope = $request->nope;
+        $mas->alamat = $request->alamat;
+        $mas->kabkot = $request->kabkot;
 
         $file = $request->file('image');
         $filename = $file->getClientOriginalName();
         $request->file('image')->move('images', $filename);
 
-        $jasa->foto = $filename;
-        $jasa->save();
+        $mas->foto = $filename;
+        $mas->save();
         return redirect('/adminsampah/table');
     }
 
     public function create_jasa(Request $request)
     {
         $jasa = new Jasa;
-        $jasa->nama = $request->nama;
+        $jasa->namaj = $request->nama;
         $jasa->email = $request->email;
         $jasa->password = Hash::make($request->password);
         $jasa->nope = $request->nope;
@@ -60,20 +62,20 @@ class SampahController extends Controller
 
     public function create_pengepul(Request $request)
     {
-        $jasa = new Pengepul;
-        $jasa->nama = $request->nama;
-        $jasa->email = $request->email;
-        $jasa->password = Hash::make($request->password);
-        $jasa->nope = $request->nope;
-        $jasa->alamat = $request->alamat;
-        $jasa->kabkot = $request->kabkot;
+        $pengepul = new Pengepul;
+        $pengepul->namap = $request->nama;
+        $pengepul->email = $request->email;
+        $pengepul->password = Hash::make($request->password);
+        $pengepul->nope = $request->nope;
+        $pengepul->alamat = $request->alamat;
+        $pengepul->kabkot = $request->kabkot;
 
         $file = $request->file('image');
         $filename = $file->getClientOriginalName();
         $request->file('image')->move('images', $filename);
 
-        $jasa->foto = $filename;
-        $jasa->save();
+        $pengepul->foto = $filename;
+        $pengepul->save();
         return redirect('/adminsampah/table#pengepul');
     }
 
@@ -123,7 +125,7 @@ class SampahController extends Controller
 
     public function update(Request $request, $id)
     {
-        $jasa = Jasa::find($id);
+        $jasa = Masyarakat::find($id);
         $jasa->nama = $request->nama;
         $jasa->email = $request->email;
         $jasa->password = $request->password;
@@ -183,12 +185,12 @@ class SampahController extends Controller
 
     }
 
-    public function edit(Request $request, $id)
+    public function editmas(Request $request, $id)
     {
-        $jasa = Jasa::find($id);
+        $masyarakat = Masyarakat::find($id);
         if ($request->session()->has('session_name'))
         {
-            return view('Admin/edit', ['jasa' => $jasa]);
+            return view('NiceAdmin/editmas', ['masyarakat' => $masyarakat]);
         }
         else
         {
@@ -250,7 +252,27 @@ class SampahController extends Controller
         {
             return redirect('/masukadmin');
         }
+    }
 
+    public function transaksi(Request $request)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            $menyampah = DB::table('Menyampah')
+                        ->join('Masyarakat', 'Menyampah.id_mas','=','Masyarakat.id')
+                        ->join('Jasa','Menyampah.id_jas','=','Jasa.id')
+                        ->select('Menyampah.*', 'Masyarakat.namam','Jasa.namaj')
+                        ->get();
+            $mengepul = DB::table('Mengepul')
+                        ->join('Pengepul', 'Mengepul.id_pengepul','=','Pengepul.id')
+                        ->select('Mengepul.*','Pengepul.namap')
+                        ->get();
+            return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul]);
+        }
+        else
+        {
+            return redirect('/masukadmin');
+        }
     }
 
 
@@ -267,7 +289,7 @@ class SampahController extends Controller
     {
         $jasa = Masyarakat::find($id);
         $jasa->delete();
-        return redirect('/adminsampah/masyarakat');
+        return redirect('/adminsampah/table');
     }
 
 

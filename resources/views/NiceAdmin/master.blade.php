@@ -49,7 +49,7 @@
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
             </div>
             <!--logo start-->
-            <a href="{{url('/niceadmin')}}" class="logo">Admin<span class="lite">Sampah</span></a>
+            <a href="{{url('/adminsampah')}}" class="logo">Admin<span class="lite">Sampah</span></a>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
@@ -78,20 +78,8 @@
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
-                            <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i> My Profile</a>
-                            </li>
                             <li>
-                                <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
-                            <li>
-                                <a href="/forgets"><i class="icon_key_alt"></i> Log Out</a>
+                                <a href="/forgets"><i class="icon_key_alt eborder-top"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -140,9 +128,9 @@
                       </a>
                   </li>
                   <li>
-                      <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
+                      <a class="" href="/adminsampah/transaksi">
+                          <i class="icon_clipboard"></i>
+                          <span>Tabel Transaksi</span>
                       </a>
                   </li>
 

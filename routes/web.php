@@ -48,18 +48,18 @@ Route::post('/jasadmin/verif', 'JasController@verif');
 
 /* punya Admin */
 
-Route::get('/adminsampah', 'SampahController@admin');
-Route::get('/adminsampah/blank', 'SampahController@blank');
-Route::get('/adminsampah/table', 'SampahController@table');
-Route::get('/adminsampah/masyarakat', 'SampahController@masyarakat');
-Route::get('/adminsampah/register', 'SampahController@register');
-Route::get('/adminsampah/table/{id}/edit', 'SampahController@edit');
-Route::get('/adminsampah/masyarakat/{id}/edit', 'SampahController@edit_mas');
-Route::get('/adminsampah/table/{id}', 'SampahController@delete_jasa');
-Route::get('/adminsampah/daftarposting', 'SampahController@DaftarPosting');
-Route::get('/adminsampah/posting', 'SampahController@Posting');
-Route::get('/masukadmin', 'SampahController@masuk');
-Route::get('/forgets', 'SampahController@forgetSession');
+Route::get('/adminsampah', 'SampahController@admin'); //dashboard utama
+Route::get('/adminsampah/table', 'SampahController@table'); //menampilkan tabel
+Route::get('/adminsampah/register', 'SampahController@register'); //untuk mendaftarkan member
+Route::get('/adminsampah/table/{id}/editmas', 'SampahController@editmas'); //untuk edit
+Route::get('/adminsampah/table/deletemas/{id}', 'SampahController@delete_mas');  //untuk mendelete
+Route::get('/adminsampah/table/deletejas/{id}', 'SampahController@delete_jasa');  //untuk mendelete
+Route::get('/adminsampah/table/deletepeng/{id}', 'SampahController@delete_jasa');  //untuk mendelete
+Route::get('/adminsampah/daftarposting', 'SampahController@DaftarPosting'); //melihat daftar postingan
+Route::get('/adminsampah/posting', 'SampahController@Posting'); //untuk masuk halaman posting
+Route::get('/adminsampah/transaksi', 'SampahController@transaksi');  //melihat semua transaksi
+Route::get('/masukadmin', 'SampahController@masuk'); //login sebagai superadmin
+Route::get('/forgets', 'SampahController@forgetSession'); //ini untuk logoout
 
 
 /* punya jasa */
