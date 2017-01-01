@@ -741,7 +741,7 @@
                               Panels
                           </header>
                       <div class="panel-body">
-                        <div class="panel panel-primary">
+                         <div class="panel panel-primary">
                           <div class="panel-heading">Panel heading</div>
                           <div class="panel-content">Panel content</div>
                         </div>          

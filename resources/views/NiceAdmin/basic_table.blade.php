@@ -36,7 +36,6 @@
                                     <header class="panel-heading">
                                         Tabel Masyarakat
                                     </header>
-
                                     <table class="table table-striped table-advance table-hover">
                                         <tbody>
                                         <tr>

@@ -28,17 +28,24 @@
 @section('komen')
     <div class="mail">
         <div class="container">
+            @if(isset($_GET['berhasil']))
+                <div class="">
+                    <h4 style="color: #00d6b2">Berhasil Komentar</h4>
+                </div>
+            @endif
             <h3>Buku Tamu</h3>
             <p class="qui"><span>Berikan komentar Anda untuk membantu kami dalam mengembangkan Web Sampah untuk menjadi lebih baik</span></p>
+
             <div class="col-md-8 mail-grid-right">
-                <form action="#" method="post">
+                <form action="/adminsampah/create_komentar" method="post">
                     <h5>Nama*</h5>
                     <input type="text" name="nama" value="Nama Anda" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama Anda';}" required="">
                     <h5>Email*</h5>
-                    <input type="email" name="mail" value="Email Anda" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Anda';}" required="">
+                    <input type="email" name="email" value="Email Anda" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Anda';}" required="">
                     <h6>Komentar*</h6>
                     <textarea name="komen" placeholder="Komentar Anda..." required=""></textarea>
                     <input type="submit" value="Komen" >
+                    {{csrf_field()}}
                 </form>
             </div>
         </div>

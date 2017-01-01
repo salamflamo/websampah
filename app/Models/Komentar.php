@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Jasa extends Model
+class Komentar extends Model
 {
-    protected $table = 'Jasa';
-
+    protected $table = "Komentar";
     protected $guarded = ['id','created_at','updated_at'];
 }

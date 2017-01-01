@@ -73,7 +73,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="{{URL::asset('nice-assets/img/avatar1_small.jpg')}}">
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username">Admin</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -106,7 +106,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">
                   <li class="active">
-                      <a class="" href="/niceadmin ">
+                      <a class="" href="/adminsampah ">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>
@@ -122,23 +122,27 @@
                       </ul>
                   </li>
                   <li>
-                      <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Charts</span>
-
-                      </a>
-                  </li>
-
-                  <li>
                       <a href="/adminsampah/table" class="">
                           <i class="icon_table"></i>
                           <span>Daftar Member</span>
                       </a>
                   </li>
                   <li>
-                      <a href="/niceadmin/posting" class="">
+                      <a href="/adminsampah/posting" class="">
                           <i class="icon_documents_alt"></i>
                           <span>Posting Artikel</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="/adminsampah/daftarposting" class="">
+                          <i class="icon_table"></i>
+                          <span>Daftar Postingan</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="" href="chart-chartjs.html">
+                          <i class="icon_piechart"></i>
+                          <span>Charts</span>
                       </a>
                   </li>
 

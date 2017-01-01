@@ -4,16 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengepul;
 use Illuminate\Http\Request;
-use App\Models\dummy;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\Jasa;
 use App\Models\Masyarakat;
-use App\Models\Menyampah;
+use App\Models\Artikel;
+use App\Models\Komentar;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Input;
 
@@ -78,19 +77,46 @@ class SampahController extends Controller
         return redirect('/adminsampah/table#pengepul');
     }
 
-    public function create_mas(Request $request)
+    public function create_posting(Request $request)
     {
-        $mas = new Masyarakat;
-        $mas->nama = $request->nama;
-        $mas->email = $request->email;
-        $mas->password = Hash::make($request->password);
-        $mas->nope = $request->nope;
-        $mas->alamat = $request->alamat;
-        $mas->kabkot = $request->kabkot;
-        $mas->foto = $request->foto;
-        $mas->save();
-        return redirect('/adminsampah/masyarakat');
+        $posting = new Artikel;
+        $posting->judul = $request->judul;
+
+        $file = $request->file('image');
+        $filename = $file->getClientOriginalName();
+        $request->file('image')->move('imageartikel', $filename);
+        $posting->gambar = $filename;
+        $posting->artikel = $request->artikel;
+        $posting->save();
+        return redirect('/adminsampah/daftarposting');
     }
+
+    /**
+     * @param Request $request
+     */
+    public function create_komentar(Request $request)
+    {
+        $komentar = new Komentar;
+        $komentar->nama = $request->nama;
+        $komentar->email = $request->email;
+        $komentar->komentar = $request->komen;
+        $komentar->save();
+        return redirect('/?berhasil');
+    }
+
+//    public function create_mas(Request $request)
+//    {
+//        $mas = new Masyarakat;
+//        $mas->nama = $request->nama;
+//        $mas->email = $request->email;
+//        $mas->password = Hash::make($request->password);
+//        $mas->nope = $request->nope;
+//        $mas->alamat = $request->alamat;
+//        $mas->kabkot = $request->kabkot;
+//        $mas->foto = $request->foto;
+//        $mas->save();
+//        return redirect('/adminsampah/masyarakat');
+//    }
 
 
     //update sebelah sini
@@ -171,6 +197,18 @@ class SampahController extends Controller
 
     }
 
+    public function DaftarPosting(Request $request)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            $posting = Artikel::all();
+            return view('NiceAdmin/table_posting', ['posting' => $posting]);
+        }
+
+        else
+            return redirect('/masukadmin');
+    }
+
     public function edit_mas(Request $request, $id)
     {
         $mas = Masyarakat::find($id);
@@ -201,6 +239,20 @@ class SampahController extends Controller
 
     }
 
+    public function admin(Request $request)
+    {
+        if ($request->session()->has('session_name'))
+        {
+            $komen = Komentar::all();
+             return view('NiceAdmin/dashboard', ['komen' => $komen]);
+         }
+        else
+        {
+            return redirect('/masukadmin');
+        }
+
+    }
+
 
     //delete data
 
@@ -220,20 +272,7 @@ class SampahController extends Controller
 
 
     //return view biasa
-
-
-     public function admin(Request $request)
-     {
-         if ($request->session()->has('session_name'))
-         {
-             return view('NiceAdmin/dashboard');
-         }
-         else
-         {
-             return redirect('/masukadmin');
-         }
-
-     }
+    
 
      public function blank()
      {
@@ -299,26 +338,16 @@ class SampahController extends Controller
 
     }
 
-    public function NiceAdmin(Request $request)
-    {
-        if ($request->session()->has('session_name'))
-            return view('NiceAdmin/dashboard');
-    }
-
-    public function Tables(Request $request)
-    {
-        return view('NiceAdmin/basic_table');
-    }
-
-    public function Forms(Request $request)
-    {
-        return view('NiceAdmin/forms');
-    }
-
+    
     public function Posting(Request $request)
     {
-        return view('NiceAdmin/posting');
+        if ($request->session()->has('session_name'))
+            return view('NiceAdmin/posting');
+        else
+            return redirect('/masukadmin');
     }
+
+
 }
 
 

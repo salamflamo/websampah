@@ -31,6 +31,8 @@ Route::post('/adminsampah/create', 'SampahController@create');
 Route::post('/adminsampah/createjasa', 'SampahController@create_jasa');
 Route::post('/adminsampah/createpengepul', 'SampahController@create_pengepul');
 Route::post('/adminsampah/create_mas', 'SampahController@create_mas');
+Route::post('/adminsampah/create_posting', 'SampahController@create_posting');
+Route::post('/adminsampah/create_komentar', 'SampahController@create_komentar');
 Route::post('/verif', 'SampahController@verif');
 
 /* punya masyarakat */
@@ -51,17 +53,13 @@ Route::get('/adminsampah/blank', 'SampahController@blank');
 Route::get('/adminsampah/table', 'SampahController@table');
 Route::get('/adminsampah/masyarakat', 'SampahController@masyarakat');
 Route::get('/adminsampah/register', 'SampahController@register');
-Route::get('/adminsampah/register_mas', 'SampahController@register_mas');
 Route::get('/adminsampah/table/{id}/edit', 'SampahController@edit');
 Route::get('/adminsampah/masyarakat/{id}/edit', 'SampahController@edit_mas');
 Route::get('/adminsampah/table/{id}', 'SampahController@delete_jasa');
-Route::get('/adminsampah/masyarakat/{id}', 'SampahController@delete_mas');
+Route::get('/adminsampah/daftarposting', 'SampahController@DaftarPosting');
+Route::get('/adminsampah/posting', 'SampahController@Posting');
 Route::get('/masukadmin', 'SampahController@masuk');
 Route::get('/forgets', 'SampahController@forgetSession');
-Route::get('/niceadmin', 'SampahController@NiceAdmin');
-Route::get('/niceadmin/tables', 'SampahController@Tables');
-Route::get('/niceadmin/forms', 'SampahController@Forms');
-Route::get('/niceadmin/posting', 'SampahController@Posting');
 
 
 /* punya jasa */
