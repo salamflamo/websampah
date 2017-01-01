@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dadfc10f-77b5-4081-9d0a-a0b6b7c6cd10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Mengepul.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/buttons.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/chart-chartjs.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/form_component.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/form_validation.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/general.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/grids.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/widgets.blade.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/imagejasa/bagan.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/NiceAdmin/editjas.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SampahController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SampahController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php" afterPath="$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/NiceAdmin/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/editmas.blade.php" afterPath="$PROJECT_DIR$/resources/views/NiceAdmin/editmas.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <ignored path="sampah.iws" />
@@ -39,38 +33,38 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+            <state relative-caret-position="705">
+              <caret line="56" column="98" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/forms.blade.php">
+      <file leaf-file-name="editmas.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/editmas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="315">
+              <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basic_table.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="basic_table.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="51" column="124" selection-start-line="51" selection-start-column="124" selection-end-line="51" selection-end-column="124" />
+            <state relative-caret-position="563">
+              <caret line="140" column="127" selection-start-line="140" selection-start-column="127" selection-end-line="140" selection-end-column="127" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampahController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SampahController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SampahController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="193" column="9" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+            <state relative-caret-position="4500">
+              <caret line="314" column="35" selection-start-line="314" selection-start-column="35" selection-end-line="314" selection-end-column="35" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
               </folding>
@@ -101,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/assets/css-sampah/style.css" />
-        <option value="$PROJECT_DIR$/resources/views/maps.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/sent.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
@@ -149,9 +141,11 @@
         <option value="$PROJECT_DIR$/resources/views/NiceAdmin/transaksiall.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/NiceAdmin/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/NiceAdmin/editmas.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/NiceAdmin/editjas.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SampahController.php" />
+        <option value="$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php" />
       </list>
     </option>
   </component>
@@ -203,8 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,18 +279,34 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sampah" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="ba&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;web&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;bas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;basi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;das&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/dashboard.blade.php&#10;mas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/master.blade.php&#10;daf&#9;FILE&#9;file:///home/salamander/sampah/resources/views/daftar.blade.php&#10;hom&#9;FILE&#9;file:///home/salamander/sampah/resources/views/home.blade.php&#10;we&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;sam&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;sa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;samp&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;fil&#9;null&#9;null&#10;upload&#9;null&#9;null&#10;uploa&#9;FILE&#9;file:///home/salamander/sampah/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;uplo&#9;null&#9;null&#10;mas_&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;table&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;sampa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;login&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/login.blade.php&#10;for&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/forms.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="bas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;ba&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;web&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;basi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;das&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/dashboard.blade.php&#10;mas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/master.blade.php&#10;daf&#9;FILE&#9;file:///home/salamander/sampah/resources/views/daftar.blade.php&#10;hom&#9;FILE&#9;file:///home/salamander/sampah/resources/views/home.blade.php&#10;we&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;sam&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;sa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;samp&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;fil&#9;null&#9;null&#10;upload&#9;null&#9;null&#10;uploa&#9;FILE&#9;file:///home/salamander/sampah/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;uplo&#9;null&#9;null&#10;mas_&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;table&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;sampa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;login&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/login.blade.php&#10;for&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/forms.blade.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -387,12 +395,13 @@
       <workItem from="1483157475690" duration="4403000" />
       <workItem from="1483167705256" duration="10626000" />
       <workItem from="1483236132008" duration="6934000" />
-      <workItem from="1483248593641" duration="8761000" />
+      <workItem from="1483248593641" duration="15798000" />
+      <workItem from="1483271820430" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137328000" />
+    <option name="totallyTimeSpent" value="144375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="26" width="1370" height="744" extended-state="0" />
@@ -436,20 +445,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/data/data.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Menyampah.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/pesan.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -468,13 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/edit_mas.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -575,17 +563,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/form_component.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1413">
-          <caret line="1056" column="78" selection-start-line="1055" selection-start-column="4" selection-end-line="1056" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/form_component.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-982">
@@ -632,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2130">
           <caret line="175" column="33" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,7 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="58" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="45" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,33 +704,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/general.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-532">
-          <caret line="610" column="92" selection-start-line="610" selection-start-column="33" selection-end-line="610" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-          <folding>
-            <marker date="1483254687492" expanded="true" signature="10612:10756" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/general.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/edit.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/forms.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
+        <state relative-caret-position="-13">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/edit_mas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -765,41 +727,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="134" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="134" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SampahController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="73" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="89" />
-          <folding />
+        <state relative-caret-position="4500">
+          <caret line="314" column="35" selection-start-line="314" selection-start-column="35" selection-end-line="314" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="162" column="47" selection-start-line="162" selection-start-column="46" selection-end-line="162" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="705">
+          <caret line="56" column="98" selection-start-line="56" selection-start-column="98" selection-end-line="56" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/editjas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="44" column="143" selection-start-line="44" selection-start-column="143" selection-end-line="44" selection-end-column="143" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/editmas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/basic_table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="51" column="124" selection-start-line="51" selection-start-column="124" selection-end-line="51" selection-end-column="124" />
+        <state relative-caret-position="563">
+          <caret line="140" column="127" selection-start-line="140" selection-start-column="127" selection-end-line="140" selection-end-column="127" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SampahController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="193" column="9" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -21,7 +21,8 @@ Route::get('/', function (){
 
 
 //Route menggunakan put
-Route::put('/adminsampah/table/{id}', 'SampahController@update');
+Route::put('/adminsampah/editmas/{id}', 'SampahController@updatemas');
+Route::put('/adminsampah/editjas/{id}', 'SampahController@updatejas');
 Route::put('/adminsampah/masyarakat/{id}', 'SampahController@update_mas');
 Route::put('/masadmin/sunting/{id}', 'MasController@kirim_sunting');
 
@@ -52,6 +53,7 @@ Route::get('/adminsampah', 'SampahController@admin'); //dashboard utama
 Route::get('/adminsampah/table', 'SampahController@table'); //menampilkan tabel
 Route::get('/adminsampah/register', 'SampahController@register'); //untuk mendaftarkan member
 Route::get('/adminsampah/table/{id}/editmas', 'SampahController@editmas'); //untuk edit
+Route::get('/adminsampah/table/{id}/editjas', 'SampahController@editjas'); //untuk edit
 Route::get('/adminsampah/table/deletemas/{id}', 'SampahController@delete_mas');  //untuk mendelete
 Route::get('/adminsampah/table/deletejas/{id}', 'SampahController@delete_jasa');  //untuk mendelete
 Route::get('/adminsampah/table/deletepeng/{id}', 'SampahController@delete_jasa');  //untuk mendelete

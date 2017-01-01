@@ -123,34 +123,49 @@ class SampahController extends Controller
 
     //update sebelah sini
 
-    public function update(Request $request, $id)
+    public function updatemas(Request $request, $id)
     {
         $jasa = Masyarakat::find($id);
-        $jasa->nama = $request->nama;
+        $jasa->namam = $request->nama;
         $jasa->email = $request->email;
-        $jasa->password = $request->password;
+        $jasa->password = Hash::make($request->password);
         $jasa->nope = $request->nope;
         $jasa->alamat = $request->alamat;
         $jasa->kabkot = $request->kabkot;
-        $jasa->foto = $request->foto;
+
+
+        if($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->move('images', $filename);
+            $jasa->foto = $filename;
+        }
+
         $jasa->save();
         return redirect('/adminsampah/table');
     }
 
-    public function update_mas(Request $request, $id)
+    public function updatejas(Request $request, $id)
     {
-        $mas = Masyarakat::find($id);
-        $mas->nama = $request->nama;
-        $mas->email = $request->email;
-        $mas->password = $request->password;
-        $mas->nope = $request->nope;
-        $mas->alamat = $request->alamat;
-        $mas->kabkot = $request->kabkot;
-        $mas->foto = $request->foto;
-        $mas->save();
-        return redirect('/adminsampah/masyarakat');
-    }
+        $jasa = Jasa::find($id);
+        $jasa->namaj = $request->nama;
+        $jasa->email = $request->email;
+        $jasa->password = Hash::make($request->password);
+        $jasa->nope = $request->nope;
+        $jasa->alamat = $request->alamat;
+        $jasa->kabkot = $request->kabkot;
 
+        if($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->move('imagejasa', $filename);
+            $jasa->foto = $filename;
+        }
+        $jasa->save();
+        return redirect('/adminsampah/table');
+    }
 
     //select data sebelah sini
 
@@ -196,7 +211,19 @@ class SampahController extends Controller
         {
             return redirect('/masukadmin');
         }
+    }
 
+    public function editjas(Request $request, $id)
+    {
+        $jasa = Jasa::find($id);
+        if ($request->session()->has('session_name'))
+        {
+            return view('NiceAdmin/editjas', ['jasa' => $jasa]);
+        }
+        else
+        {
+            return redirect('/masukadmin');
+        }
     }
 
     public function DaftarPosting(Request $request)
@@ -287,8 +314,8 @@ class SampahController extends Controller
 
     public function delete_mas($id)
     {
-        $jasa = Masyarakat::find($id);
-        $jasa->delete();
+        $mass = Masyarakat::find($id);
+        $mass->delete();
         return redirect('/adminsampah/table');
     }
 

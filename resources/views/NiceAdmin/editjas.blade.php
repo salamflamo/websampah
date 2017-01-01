@@ -19,14 +19,14 @@
                             Form Edit Masyarakat
                         </header>
                         <div class="panel-body">
-                            <form role="form" action="/adminsampah/editmas/{{$masyarakat->id}}" method="post" enctype="multipart/form-data">
+                            <form role="form" action="/adminsampah/editjas/{{$jasa->id}}" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="nama">Nama Lengkap</label>
-                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap" value="{{$masyarakat->namam}}">
+                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama Lengkap" value="{{$jasa->namaj}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="{{$masyarakat->email}}">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="{{$jasa->email}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
@@ -34,15 +34,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="nope">No HP</label>
-                                    <input type="text" name="nope" class="form-control" id="nope" placeholder="No HP " value="{{$masyarakat->nope}}" >
+                                    <input type="text" name="nope" class="form-control" id="nope" placeholder="No HP " value="{{$jasa->nope}}" >
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat">Alamat</label>
-                                    <textarea name="alamat" class="form-control" id="alamat" placeholder="Alamat Lengkap" >{{$masyarakat->alamat}}</textarea>
+                                    <textarea name="alamat" class="form-control" id="alamat" placeholder="Alamat Lengkap" >{{$jasa->alamat}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="kabkot">Kab. / Kota</label>
-                                    <input type="text" name="kabkot" class="form-control" id="kabkot" placeholder="Kab. / Kota " value="{{$masyarakat->kabkot}}">
+                                    <input type="text" name="kabkot" class="form-control" id="kabkot" placeholder="Kab. / Kota " value="{{$jasa->kabkot}}">
                                 </div>
                                 <div class="form-group">
                                     <label for="foto">Foto Asli</label>

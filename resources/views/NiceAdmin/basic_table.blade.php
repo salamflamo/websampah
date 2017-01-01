@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 @extends('NiceAdmin.master')
-@section('title','Tables')
+@section('title','Tabel Member')
 @section('tables')
 <section id="main-content">
     <section class="wrapper">
@@ -50,27 +50,10 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <a class="btn btn-success" href="/adminsampah/table/{{$mas->id}}/editmas"><i class="icon_clipboard"></i></a>
-                                                    <a class="btn btn-danger" data-toggle="modal" href="#hapusRow"><i class="icon_close_alt2"></i></a>
+                                                    <a href="/adminsampah/table/deletemas/{{$mas->id}}" onclick="return confirm('Anda yakin dihapus?');" class="btn btn-danger"><i class="icon_close_alt2"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        <div class="modal fade" id="hapusRow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title">Konfirmasi Hapus</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Apakah Anda yakin untuk menghapus dari daftar member? !!
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button data-dismiss="modal" class="btn btn-primary" type="button">Close</button>
-                                                        <a href="/adminsampah/table/deletemas/{{$mas->id}}" class="btn btn-default" type="button">Hapus</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         @endforeach
                                         </tbody>
                                     </table>
@@ -110,28 +93,11 @@
                                             <td>{{$jas->kabkot}}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a class="btn btn-success" href="#"><i class="icon_clipboard"></i></a>
-                                                    <a class="btn btn-danger" data-toggle="modal" href="#hapusRow2"><i class="icon_close_alt2"></i></a>
+                                                    <a class="btn btn-success" href="/adminsampah/table/{{$jas->id}}/editjas"><i class="icon_clipboard"></i></a>
+                                                    <a href="/adminsampah/table/deletejas/{{$jas->id}}" onclick="return confirm('Anda yakin dihapus?');" class="btn btn-danger"><i class="icon_close_alt2"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
-                                        <div class="modal fade" id="hapusRow2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title">Konfirmasi Hapus</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Apakah Anda yakin untuk menghapus dari daftar member? !!
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button data-dismiss="modal" class="btn btn-primary" type="button">Close</button>
-                                                        <a href="/adminsampah/table/deletejas/{{$mas->id}}" class="btn btn-default" type="button">Hapus</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                         @endforeach
                                         </tbody>
                                     </table>
@@ -172,27 +138,10 @@
                                                 <td>
                                                     <div class="btn-group">
                                                         <a class="btn btn-success" href="#"><i class="icon_clipboard"></i></a>
-                                                        <a class="btn btn-danger" data-toggle="modal" href="#hapusRow3"><i class="icon_close_alt2"></i></a>
+                                                        <a class="btn btn-danger" href="/adminsampah/table/deletepeng/{{$peng->id}}" onclick="return confirm('Anda yakin dihapus?');" class="btn btn-danger"><i class="icon_close_alt2"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <div class="modal fade" id="hapusRow3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                            <h4 class="modal-title">Konfirmasi Hapus</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Apakah Anda yakin untuk menghapus dari daftar member? !!
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button data-dismiss="modal" class="btn btn-primary" type="button">Close</button>
-                                                            <a href="/adminsampah/table/deletepeng/{{$mas->id}}" class="btn btn-default" type="button">Hapus</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         @endforeach
                                         </tbody>
                                     </table>
