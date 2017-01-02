@@ -181,7 +181,7 @@ class MasController extends Controller
     public function verif(Request $request)
     {
         $masyarakat = DB::table('Masyarakat')->where('email', $request->email)->first();
-        $cek = Hash::check($request->password, $pengepul->password);
+        $cek = Hash::check($request->password, $masyarakat->password);
         if ($cek)
         {
             $request->session()->put('mas_session',$masyarakat->id);
