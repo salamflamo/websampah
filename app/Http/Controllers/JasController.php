@@ -6,11 +6,11 @@ use App\Models\Artikel;
 use App\Models\Mengepul;
 use App\Models\Pengepul;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Input;
 use App\Models\Jasa;
 use App\Models\Masyarakat;
 use App\Models\Menyampah;
@@ -74,11 +74,16 @@ class JasController extends Controller
     
     public function verif(Request $request)
     {
-        $jasa = DB::table('Jasa')->where('email',$request->email)->first();
-        $cek = Hash::check($request->password,$jasa->password);
-        if ($cek)
+//        $jasa = DB::table('Jasa')->where('email','=',$request->email)->first();
+//        $pass = $jasa->password;
+//        $cek = Hash::check($request->password,$pass);
+        $validate_admin = DB::table('Jasa')
+            ->select('id','email','password')
+            ->where('email', Input::get('email'))
+            ->first();
+        if ($validate_admin && Hash::check(Input::get('password'), $validate_admin->password))
         {
-            $request->session()->put('jas_session',$jasa->id);
+            $request->session()->put('jas_session',$validate_admin->id);
             return redirect('/jasadmin');
         }
         else

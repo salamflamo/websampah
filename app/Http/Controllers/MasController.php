@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Input;
 use App\Models\Jasa;
 use App\Models\Masyarakat;
 use App\Models\Menyampah;
@@ -180,12 +180,17 @@ class MasController extends Controller
 
     public function verif(Request $request)
     {
-        $jasa = DB::table('Masyarakat')->where('email', $request->email)->first();
-        $cek = Hash::check($request->password, $jasa->password);
-        if ($cek) {
-            $request->session()->put('mas_session', $jasa->id);
+        $validate_admin = DB::table('Masyarakat')
+            ->select('id','email','password')
+            ->where('email', Input::get('email'))
+            ->first();
+        if ($validate_admin && Hash::check(Input::get('password'), $validate_admin->password))
+        {
+            $request->session()->put('jas_session',$validate_admin->id);
             return redirect('/masadmin');
-        } else {
+        }
+        else
+        {
             return redirect('/');
         }
     }
