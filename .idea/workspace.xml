@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dadfc10f-77b5-4081-9d0a-a0b6b7c6cd10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/NiceAdmin/loginpeng.blade.php" afterPath="$PROJECT_DIR$/resources/views/NiceAdmin/loginpeng.blade.php" />
     </list>
     <ignored path="sampah.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -471,12 +470,12 @@
       <workItem from="1483248593641" duration="15798000" />
       <workItem from="1483271820430" duration="7488000" />
       <workItem from="1483319558589" duration="24193000" />
-      <workItem from="1483353665126" duration="7425000" />
+      <workItem from="1483353665126" duration="8032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183471000" />
+    <option name="totallyTimeSpent" value="184078000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="26" width="1370" height="744" extended-state="0" />
@@ -852,7 +851,7 @@
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
