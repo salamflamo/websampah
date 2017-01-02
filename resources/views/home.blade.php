@@ -234,6 +234,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="mail-grids">
 				<a class="btn btn-default" href='{{url('/masuk')}}'>Masuk Jasa</a>
 				<a class="btn btn-default" href='{{url('/masukadmin')}}'>Masuk Admin</a>
+				<a class="btn btn-default" href='{{url('/masukpengepul')}}'>Masuk Pengepul</a>
 			</div>
 		</div>
 		<div class="copy-right">
