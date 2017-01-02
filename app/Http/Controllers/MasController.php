@@ -195,6 +195,18 @@ class MasController extends Controller
         }
     }
 
+    public function login(Request $request)
+    {
+        if ($request->session()->has('mas_session'))
+        {
+            return redirect('/masadmin');
+        }
+        else
+        {
+            return view('NiceAdmin/loginmas');
+        }
+    }
+
     public function forgetSession(Request $request)
     {
         $request->session()->forget('mas_session');

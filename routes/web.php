@@ -101,6 +101,7 @@ Route::get('/masadmin/table', 'MasController@mas_table');
 Route::get('/masadmin/mengepul', 'MasController@Pengepul');
 Route::get('/masadmin/mengepul/{id}', 'MasController@Mengepul');
 Route::get('/keluarmas', 'MasController@forgetSession');
+Route::get('/masukmasyarakat', 'MasController@login');
 
 
 /* punya pengepul */

@@ -1,7 +1,8 @@
 @extends('home')
 @section('daftar')
 <div class="col-md-8 mail-grid-right">
-    <h4><b>Daftar Gratis</b>, <span>jika sudah punya akun silahkan <button onclick="document.getElementById('id01').style.display='block'">Login</button> </span></h4>
+    {{--<h4><b>Daftar Gratis</b>, <span>jika sudah punya akun silahkan <button onclick="document.getElementById('id01').style.display='block'">Login</button> </span></h4>--}}
+    <h4><b>Daftar Gratis</b>, <span>jika sudah punya akun silahkan  <a href="/masukmasyarakat">Login</a> </span></h4>
     <br>
     <form action="/daftar" method="post">
         <h5>Nama*</h5>
