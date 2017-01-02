@@ -71,15 +71,15 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="/images/{{$nama->foto}}" style="width: 35px; height: 25px">
+                                {{--<img alt="" src="/imagejasa/{{$nama->foto}}" style="width: 35px; height: 25px">--}}
                             </span>
-                            <span class="username">{{$nama->namam}}</span>
+                            <span class="username">{{$nama}}</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li>
-                                <a href="/masadmin/profile"><i class="icon_profile eborder-top"></i>My Profile</a>
+                                <a href="@yield('profile')"><i class="icon_profile eborder-top"></i>My Profile</a>
                             </li>
                             <li>
                                 <a href="/@yield('logout')"><i class="icon_key_alt eborder-top"></i> Log Out</a>

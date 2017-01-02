@@ -47,6 +47,9 @@ Route::post('/masadmin/mengepul/{id}/kirim', 'MasController@KirimMengepul');
 
 /* punya jasa */
 Route::post('/verifjas', 'JasController@verif');
+Route::post('/jasadmin/mengepul/{id}/kirim', 'JasController@KirimMengepul');
+Route::post('/jasadmin/createposting', 'JasController@create_posting');
+Route::post('/daftarkan', 'JasController@daftarkan');
 
 //Route menggunakan get
 
@@ -73,10 +76,15 @@ Route::get('/adminsampah/viewjas/{id}', 'SampahController@DetailJas'); //ini unt
 /* punya jasa */
 
 Route::get('/jasadmin', 'JasController@jas_admin');
-Route::get('/jasadmin/table', 'JasController@jas_table');
-Route::get('/jasadmin/keluar', 'JasController@keluar');
+Route::get('/jasadmin/transaksi', 'JasController@jas_table');
+Route::get('/keluarjas', 'JasController@keluar');
 Route::get('/masuk', 'JasController@masuk');
-Route::get('/jasadmin/ubah/{id}', 'JasController@ubah');
+Route::get('/jasadmin/transaksi/{id}', 'JasController@ubah');
+Route::get('/jasadmin/mengepul/{id}', 'JasController@Mengepul');
+Route::get('/jasadmin/mengepul', 'JasController@DaftarMengepul');
+Route::get('/jasadmin/posting', 'JasController@Posting');
+Route::get('/jasadmin/tableposting', 'JasController@DaftarPosting');
+Route::get('/daftarjadijasa', 'JasController@ndaftarjasa');
 
 /*punya masyarakat */
 Route::get('/terimakasih', 'SampahController@thanks');

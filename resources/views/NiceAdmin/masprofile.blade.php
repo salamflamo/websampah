@@ -3,6 +3,7 @@
 @section('title', 'My Profile')
 @section('logout', 'keluarmas')
 @section('admin', 'masadmin')
+@section('profile','/masadmin/profile')
 @section('content')
     <div id="main-content">
         <section class="wrapper">

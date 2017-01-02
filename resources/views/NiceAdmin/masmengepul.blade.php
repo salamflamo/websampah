@@ -1,6 +1,7 @@
 @extends('NiceAdmin.mastermember')
 @section('title', 'Mengepul')
 @section('logout', 'keluarmas')
+@section('profile','/masadmin/profile')
 @section('admin', 'masadmin')
 @section('content')
     <section id="main-content">

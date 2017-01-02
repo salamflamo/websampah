@@ -67,7 +67,8 @@ class MasController extends Controller
         if ($request->session()->has('mas_session'))
         {
             $id = $request->session()->get('mas_session');
-            $nama = Masyarakat::find($id);
+            $mass = Masyarakat::find($id);
+            $nama = $mass->namam;
             return view('NiceAdmin/masprofile',['nama' => $nama]);
         }
         else
@@ -82,7 +83,8 @@ class MasController extends Controller
         {
             $id = $request->session()->get('mas_session');
 //            $menyampah = Menyampah::where('id_mas', $id)->paginate(6);
-            $nama = Masyarakat::find($id);
+            $mass = Masyarakat::find($id);
+            $nama = $mass->namam;
             $menyampah = DB::table('Menyampah')->where('id_mas','=',$id)->paginate(4);
             $mengepul = DB::table('Mengepul')
                 ->join('Pengepul', 'Mengepul.id_pengepul','=','Pengepul.id')
@@ -102,7 +104,8 @@ class MasController extends Controller
         if($request->session()->has('mas_session'))
         {
             $id = $request->session()->get('mas_session');
-            $nama = Masyarakat::find($id);
+            $mass = Masyarakat::find($id);
+            $nama = $mass->namam;
             $pengepul = Pengepul::paginate(6);
             return view('NiceAdmin/daftarpengepul', ['pengepul' => $pengepul, 'nama' => $nama]);
         }
@@ -118,7 +121,8 @@ class MasController extends Controller
         {
             $pengepul = Pengepul::find($id);
             $idd = $request->session()->get('mas_session');
-            $nama = Masyarakat::find($idd);
+            $mass = Masyarakat::find($idd);
+            $nama = $mass->namam;
             return view('NiceAdmin/masmengepul', ['nama' => $nama, 'pengepul' => $pengepul]);
         }
         else
@@ -148,7 +152,8 @@ class MasController extends Controller
         if ($massession)
         {
             $id = $request->session()->get('mas_session');
-            $nama = Masyarakat::find($id);
+            $mass = Masyarakat::find($id);
+            $nama = $mass->namam;
             return view('NiceAdmin/dashboardmas', ['nama' => $nama]);
         }
         else
@@ -162,8 +167,9 @@ class MasController extends Controller
 
         if ($request->session()->has('mas_session'))
         {
-            $massession = $request->session()->get('mas_session');
-            $nama = Masyarakat::find($massession);
+            $id = $request->session()->get('mas_session');
+            $mass = Masyarakat::find($id);
+            $nama = $mass->namam;
             return view('NiceAdmin/masmenyampah',['nama' => $nama]);
         }
         else

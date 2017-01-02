@@ -1,7 +1,8 @@
-@extends('NiceAdmin.master')
+@extends('NiceAdmin.mastermember')
 @section('title', 'Dashboard')
-@section('logout', '/keluarjas')
-@section('dashboard')
+@section('logout', 'keluarjas')
+@section('admin','jasadmin')
+@section('content')
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
@@ -10,7 +11,7 @@
             <div class="col-lg-12">
                 <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
                 <ol class="breadcrumb">
-                    <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                    <li><i class="fa fa-home"></i><a href="/jasadmin">Home</a></li>
                     <li><i class="fa fa-laptop"></i>Dashboard</li>
                 </ol>
             </div>
@@ -46,22 +47,48 @@
             </div><!--/.col-->
         </div><!--/.row-->
         <!-- project team & activity start -->
-        <div class="row">
-            <div class="col-md-12 portlets">
-                <!-- Widget -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="pull-left">Komentar Pedas</div>
-                        <div class="widget-icons pull-right">
-                            <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                            <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-              </div>
-            </div>
-        </div><br><br>
-        <!-- project team & activity end -->
 
     </section>
     @endsection
+
+
+    @section('navbar')
+        <aside>
+            <div id="sidebar"  class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a class="" href="/jasadmin ">
+                            <i class="icon_house_alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="/jasadmin/transaksi">
+                            <i class="icon_table"></i>
+                            <span>Tabel Transaksi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="/jasadmin/mengepul">
+                            <i class="icon_table"></i>
+                            <span>Tabel Pengepul</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="/jasadmin/posting">
+                            <i class="icon_clipboard"></i>
+                            <span>Posting Artikel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/jasadmin/tableposting" class="">
+                            <i class="icon_table"></i>
+                            <span>Tabel Posting</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+@endsection

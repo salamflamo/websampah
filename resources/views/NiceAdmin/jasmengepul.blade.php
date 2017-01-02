@@ -1,8 +1,7 @@
 @extends('NiceAdmin.mastermember')
-@section('title', 'Menyampah')
-@section('logout', 'keluarmas')
-@section('profile','/masadmin/profile')
-@section('admin', 'masadmin')
+@section('title', 'Daftar Pengepul')
+@section('logout', 'keluarjas')
+@section('admin','jasadmin')
 @section('content')
     <section id="main-content">
         <section class="wrapper">
@@ -28,17 +27,23 @@
                     <section class="panel">
                             <section class="panel-body">
                                 <header class="panel-heading">
-                                    Form Menyampah
+                                    Form Mengepul
                                 </header>
                                 <div class="panel-body">
-                                    <form role="form" action="/masadmin/kirim" method="post" enctype="multipart/form-data">
+                                    <form role="form" action="/jasadmin/mengepul/{{$pengepul->id}}/kirim" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="berat">Berat Sampah</label>
                                             <input type="number" name="berat" class="form-control" id="berat" placeholder="Beratnya" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="daerah">Daerah Sampah</label>
-                                            <input type="text" name="daerah" class="form-control" id="daerah" placeholder="Daerah Sampah" required>
+                                            <label for="jenis">Jenis</label>
+                                            <select class="form-control" name="jenis" id="jenis">
+                                                <option value="Plastik">Plastik</option>
+                                                <option value="Beling">Beling</option>
+                                                <option value="Logam">Logam</option>
+                                                <option value="Kertas">Kertas</option>
+                                                <option value="Organik">Organik</option>
+                                            </select>
                                         </div>
                                         {{csrf_field()}}
                                         <button type="submit" name="submit" value=2 class="btn btn-primary">Submit</button>
@@ -58,27 +63,33 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
                 <li class="active">
-                    <a class="" href="/masadmin ">
+                    <a class="" href="/jasadmin ">
                         <i class="icon_house_alt"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/masadmin/menyampah" class="">
-                        <i class="icon_document_alt"></i>
-                        <span>Menyampah</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/masadmin/table" class="">
+                    <a class="" href="/jasadmin/transaksi">
                         <i class="icon_table"></i>
                         <span>Tabel Transaksi</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/masadmin/mengepul">
+                    <a class="" href="/jasadmin/mengepul">
+                        <i class="icon_table"></i>
+                        <span>Tabel Pengepul</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/jasadmin/posting">
                         <i class="icon_clipboard"></i>
-                        <span>Mengepul</span>
+                        <span>Posting Artikel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/jasadmin/tableposting" class="">
+                        <i class="icon_table"></i>
+                        <span>Tabel Posting</span>
                     </a>
                 </li>
             </ul>

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 @extends('NiceAdmin.mastermember')
-@section('title', 'Tabel Menyampah')
-@section('logout', 'keluarmas')
-@section('admin', 'masadmin')
-@section('profile','/masadmin/profile')
+@section('title', 'Tabel Transaksi')
+@section('logout', 'keluarjas')
+@section('admin', 'jasadmin')
 @section('content')
 <section id="main-content">
     <section class="wrapper">
@@ -32,6 +31,7 @@
                                             <th><i class="icon_pin_alt"></i> Daerah</th>
                                             <th><i class="icon_cogs"></i> Status</th>
                                             <th><i class="icon_cogs"></i> Waktu</th>
+                                            <th><i class="icon_cogs"></i> Aksi</th>
                                         </tr>
                                         @foreach($menyampah as $sampah)
                                         <tr>
@@ -39,6 +39,11 @@
                                             <td>{{$sampah->daerah}}</td>
                                             <td>{{$sampah->status}}</td>
                                             <td>{{$sampah->created_at}}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="/jasadmin/transaksi/{{$sampah->id}}" onclick="return confirm('Anda yakin sudah lunas?');" class="btn btn-success"><i class="icon_star_alt"></i></a>
+                                                </div>
+                                            </td>
                                         </tr>
                                         @endforeach
                                         </tbody>
@@ -109,27 +114,33 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
                 <li class="active">
-                    <a class="" href="/masadmin ">
+                    <a class="" href="/jasadmin ">
                         <i class="icon_house_alt"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/masadmin/menyampah" class="">
-                        <i class="icon_document_alt"></i>
-                        <span>Menyampah</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/masadmin/table" class="">
+                    <a class="" href="/jasadmin/transaksi">
                         <i class="icon_table"></i>
                         <span>Tabel Transaksi</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/masadmin/mengepul">
+                    <a class="" href="/jasadmin/mengepul">
+                        <i class="icon_table"></i>
+                        <span>Tabel Pengepul</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/jasadmin/posting">
                         <i class="icon_clipboard"></i>
-                        <span>Mengepul</span>
+                        <span>Posting Artikel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/jasadmin/tableposting" class="">
+                        <i class="icon_table"></i>
+                        <span>Tabel Posting</span>
                     </a>
                 </li>
             </ul>

@@ -2,6 +2,7 @@
 @section('title', 'Dashboard')
 @section('logout', 'keluarmas')
 @section('admin', 'masadmin')
+@section('profile','/masadmin/profile')
 @section('content')
 <!--main content start-->
 <section id="main-content">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 @extends('NiceAdmin.mastermember')
 @section('title', 'Daftar Pengepul')
-@section('logout', 'keluarmas')
-@section('admin', 'masadmin')
-@section('profile','/masadmin/profile')
+@section('logout', 'keluarjas')
+@section('admin','jasadmin')
+@section('profile','#')
 @section('content')
 <section id="main-content">
     <section class="wrapper">
@@ -35,7 +35,7 @@
                                         </tr>
                                         @foreach($pengepul as $kepul)
                                         <tr>
-                                            <td><a href="/masadmin/mengepul/{{$kepul->id}}">{{$kepul->namap}}</a> </td>
+                                            <td><a href="/jasadmin/mengepul/{{$kepul->id}}">{{$kepul->namap}}</a> </td>
                                             <td>{{$kepul->kabkot}}</td>
                                             <td>{{$kepul->nope}}</td>
                                             <td>{{$kepul->email}}</td>
@@ -66,27 +66,33 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu">
                 <li class="active">
-                    <a class="" href="/masadmin ">
+                    <a class="" href="/jasadmin ">
                         <i class="icon_house_alt"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/masadmin/menyampah" class="">
-                        <i class="icon_document_alt"></i>
-                        <span>Menyampah</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/masadmin/table" class="">
+                    <a class="" href="/jasadmin/transaksi">
                         <i class="icon_table"></i>
-                        <span>Tabel Menyampah</span>
+                        <span>Tabel Transaksi</span>
                     </a>
                 </li>
                 <li>
-                    <a class="" href="/masadmin/mengepul">
+                    <a class="" href="/jasadmin/mengepul">
+                        <i class="icon_table"></i>
+                        <span>Tabel Pengepul</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="/jasadmin/posting">
                         <i class="icon_clipboard"></i>
-                        <span>Mengepul</span>
+                        <span>Posting Artikel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/jasadmin/tableposting" class="">
+                        <i class="icon_table"></i>
+                        <span>Tabel Posting</span>
                     </a>
                 </li>
             </ul>
