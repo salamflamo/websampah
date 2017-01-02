@@ -1,7 +1,8 @@
-@extends('NiceAdmin.master')
+@extends('NiceAdmin.mastermember')
 @section('title', 'Dashboard')
-@section('logout', '/keluarmas')
-@section('dashboard')
+@section('logout', 'keluarpeng')
+@section('profile','#')
+@section('content')
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
@@ -65,3 +66,39 @@
 
     </section>
     @endsection
+
+
+    @section('navbar')
+        <aside>
+            <div id="sidebar"  class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a class="" href="/pengadmin ">
+                            <i class="icon_house_alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pengadmin/mengepul" class="">
+                            <i class="icon_trash"></i>
+                            <span>Menyampah</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pengadmin/posting" class="">
+                            <i class="icon_document"></i>
+                            <span>Tabel Posting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="" href="/pengadmin/tabelposting">
+                            <i class="icon_table"></i>
+                            <span>Tabel Transaksi</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+@endsection

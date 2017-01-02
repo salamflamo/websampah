@@ -51,6 +51,10 @@ Route::post('/jasadmin/mengepul/{id}/kirim', 'JasController@KirimMengepul');
 Route::post('/jasadmin/createposting', 'JasController@create_posting');
 Route::post('/daftarkan', 'JasController@daftarkan');
 
+/* punya pengepul */
+Route::post('/verifpeng','PengepulController@verif');
+Route::post('/pengadmin/createposting','PengepulController@create_posting');
+
 //Route menggunakan get
 
 /* punya Admin */
@@ -97,6 +101,16 @@ Route::get('/masadmin/table', 'MasController@mas_table');
 Route::get('/masadmin/mengepul', 'MasController@Pengepul');
 Route::get('/masadmin/mengepul/{id}', 'MasController@Mengepul');
 Route::get('/keluarmas', 'MasController@forgetSession');
+
+
+/* punya pengepul */
+Route::get('/masukpengepul','PengepulController@login');
+Route::get('/pengadmin','PengepulController@dashboard');
+Route::get('/pengadmin/mengepul','PengepulController@TabelMengepul');
+Route::get('/pengadmin/mengepul/{id}','PengepulController@ubah');
+Route::get('/pengadmin/posting','PengepulController@Posting');
+Route::get('/pengadmin/tabelposting','PengepulController@DaftarPosting');
+Route::get('/keluarpeng','PengepulController@forget');
 
 
 /* tidak dipakai */

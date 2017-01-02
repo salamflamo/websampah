@@ -1,5 +1,5 @@
 @extends('NiceAdmin.masterlogin')
-@section('title', 'Login Jasa')
+@section('title', 'Login Pengepul')
         @section('content')
 </head>
 
