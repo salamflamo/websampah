@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pengepul;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Jasa;
 use App\Models\Masyarakat;
 use App\Models\Menyampah;
+use App\Models\Mengepul;
 
 
 class MasController extends Controller
@@ -18,7 +20,7 @@ class MasController extends Controller
     public function daftar(Request $request)
     {
         $mas = new Masyarakat;
-        $mas->nama = $request->nama;
+        $mas->namam = $request->nama;
         $mas->email = $request->email;
         $mas->password = Hash::make($request->password);
         $mas->nope = $request->nope;
@@ -36,21 +38,27 @@ class MasController extends Controller
         $mas->id_mas = $request->session()->get('mas_session');
         $mas->status = 'belum';
         $mas->save();
-        return redirect('/masadmin/pesan?berhasil');
+        return redirect('/masadmin/menyampah?berhasil');
     }
 
     public function kirim_sunting(Request $request,$id)
     {
         $mas = Masyarakat::find($id);
-        $mas->nama = $request->nama;
+        $mas->namam = $request->nama;
         $mas->email = $request->email;
         $mas->password = Hash::make($request->password);
         $mas->nope = $request->nope;
         $mas->alamat = $request->alamat;
         $mas->kabkot = $request->kabkot;
-        $mas->foto = $request->foto;
+        if($request->hasFile('image'))
+        {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->move('images', $filename);
+            $mas->foto = $filename;
+        }
         $mas->save();
-        return redirect('/masadmin');
+        return redirect('/masadmin/profile');
     }
 
     public function sunting(Request $request)
@@ -59,8 +67,8 @@ class MasController extends Controller
         if ($request->session()->has('mas_session'))
         {
             $id = $request->session()->get('mas_session');
-            $mas = Masyarakat::find($id);
-            return view('Admin/masprofil',['mas' => $mas]);
+            $nama = Masyarakat::find($id);
+            return view('NiceAdmin/masprofile',['nama' => $nama]);
         }
         else
         {
@@ -73,8 +81,14 @@ class MasController extends Controller
         if($request->session()->has('mas_session'))
         {
             $id = $request->session()->get('mas_session');
-            $trans = Menyampah::where('id_mas', $id)->get();
-            return view('Admin/mas_table', ['trans' => $trans]);
+//            $menyampah = Menyampah::where('id_mas', $id)->paginate(6);
+            $nama = Masyarakat::find($id);
+            $menyampah = DB::table('Menyampah')->where('id_mas','=',$id)->paginate(4);
+            $mengepul = DB::table('Mengepul')
+                ->join('Pengepul', 'Mengepul.id_pengepul','=','Pengepul.id')
+                ->select('Mengepul.*','Pengepul.kabkot')
+                ->paginate(4);
+            return view('NiceAdmin/mastabel', ['menyampah' => $menyampah,'mengepul' => $mengepul, 'nama' => $nama]);
         }
         else
         {
@@ -82,12 +96,60 @@ class MasController extends Controller
         }
     }
 
+
+    public function Pengepul(Request $request)
+    {
+        if($request->session()->has('mas_session'))
+        {
+            $id = $request->session()->get('mas_session');
+            $nama = Masyarakat::find($id);
+            $pengepul = Pengepul::paginate(6);
+            return view('NiceAdmin/daftarpengepul', ['pengepul' => $pengepul, 'nama' => $nama]);
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+
+    public function Mengepul(Request $request, $id)
+    {
+        if($request->session()->has('mas_session'))
+        {
+            $pengepul = Pengepul::find($id);
+            $idd = $request->session()->get('mas_session');
+            $nama = Masyarakat::find($idd);
+            return view('NiceAdmin/masmengepul', ['nama' => $nama, 'pengepul' => $pengepul]);
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+
+    public function KirimMengepul(Request $request, $id)
+    {
+            $idd = $request->session()->get('mas_session');
+            $pemesan = Masyarakat::find($idd);
+            $mengepul = new Mengepul;
+            $mengepul->jenis = $request->jenis;
+            $mengepul->berat = $request->berat;
+            $mengepul->oleh = $pemesan->namam;
+            $mengepul->status = "Belum";
+            $mengepul->id_pemesan = $idd;
+            $mengepul->id_pengepul = $id;
+            $mengepul->save();
+            return redirect('/masadmin/table');
+    }
+
     public function mas_dashboard(Request $request)
     {
         $massession = $request->session()->has('mas_session');
         if ($massession)
         {
-            return view('Admin/mas_admin');
+            $id = $request->session()->get('mas_session');
+            $nama = Masyarakat::find($id);
+            return view('NiceAdmin/dashboardmas', ['nama' => $nama]);
         }
         else
         {
@@ -101,8 +163,8 @@ class MasController extends Controller
         if ($request->session()->has('mas_session'))
         {
             $massession = $request->session()->get('mas_session');
-            $mass = Masyarakat::find($massession);
-            return view('Admin/pesan',['mass' => $mass]);
+            $nama = Masyarakat::find($massession);
+            return view('NiceAdmin/masmenyampah',['nama' => $nama]);
         }
         else
         {

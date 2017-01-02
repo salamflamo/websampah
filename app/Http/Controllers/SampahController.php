@@ -175,10 +175,10 @@ class SampahController extends Controller
         if ($request->session()->has('session_name'))
         {
 //            $jasa = Jasa::all();
-            $jasa = DB::table('Jasa')->paginate(6);
-            $masyarakat = DB::table('Masyarakat')->paginate(6);
+            $jasa = DB::table('Jasa')->paginate(4);
+            $masyarakat = DB::table('Masyarakat')->paginate(4);
 //            $pengepul = Pengepul::all();
-            $pengepul = DB::table('Pengepul')->paginate(6);
+            $pengepul = DB::table('Pengepul')->paginate(4);
             return view('NiceAdmin/basic_table', ['jasa' => $jasa, 'masyarakat' => $masyarakat, 'pengepul' => $pengepul]);
         }
         else
@@ -292,12 +292,12 @@ class SampahController extends Controller
                         ->join('Masyarakat', 'Menyampah.id_mas','=','Masyarakat.id')
                         ->join('Jasa','Menyampah.id_jas','=','Jasa.id')
                         ->select('Menyampah.*', 'Masyarakat.namam','Jasa.namaj')
-                        ->get();
+                        ->paginate(3);
             $jummenyampah = Menyampah::where('status', 'sudah')->count();
             $mengepul = DB::table('Mengepul')
                         ->join('Pengepul', 'Mengepul.id_pengepul','=','Pengepul.id')
                         ->select('Mengepul.*','Pengepul.namap')
-                        ->get();
+                        ->paginate(3);
             $jummengepul = Mengepul::where('status', 'Lunas')->count();
             $member = Masyarakat::all()->count() + Jasa::all()->count() + Pengepul::all()->count();
             return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul, 

@@ -28,6 +28,8 @@ Route::put('/masadmin/sunting/{id}', 'MasController@kirim_sunting');
 
 
 //Route menggunakan post
+
+/* punya admin */
 Route::post('/adminsampah/create', 'SampahController@create');
 Route::post('/adminsampah/createjasa', 'SampahController@create_jasa');
 Route::post('/adminsampah/createpengepul', 'SampahController@create_pengepul');
@@ -40,10 +42,11 @@ Route::post('/verif', 'SampahController@verif');
 Route::post('/daftar', 'MasController@daftar');
 Route::post('/masverif', 'MasController@verif');
 Route::post('/masadmin/kirim', 'MasController@kirim');
+Route::post('/masadmin/mengepul/{id}/kirim', 'MasController@KirimMengepul');
 
 
 /* punya jasa */
-Route::post('/jasadmin/verif', 'JasController@verif');
+Route::post('/verifjas', 'JasController@verif');
 
 //Route menggunakan get
 
@@ -80,10 +83,12 @@ Route::get('/terimakasih', 'SampahController@thanks');
 Route::get('/sent', 'SampahController@sent');
 Route::get('/masadmin', 'MasController@mas_dashboard');
 Route::get('/masadmin/keluar', 'MasController@forgetSession');
-Route::get('/masadmin/pesan', 'MasController@pesan');
-Route::get('/masadmin/sunting', 'MasController@sunting');
+Route::get('/masadmin/menyampah', 'MasController@pesan');
+Route::get('/masadmin/profile', 'MasController@sunting');
 Route::get('/masadmin/table', 'MasController@mas_table');
-Route::get('/keluar', 'MasController@forgetSession');
+Route::get('/masadmin/mengepul', 'MasController@Pengepul');
+Route::get('/masadmin/mengepul/{id}', 'MasController@Mengepul');
+Route::get('/keluarmas', 'MasController@forgetSession');
 
 
 /* tidak dipakai */

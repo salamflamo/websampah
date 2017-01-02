@@ -18,7 +18,7 @@ class JasController extends Controller
     public function jas_admin(Request $request)
     {
         if ($request->session()->has('jas_session'))
-            return view('Admin/jas_admin');
+            return view('NiceAdmin/');
         else
             return redirect('/masuk');
     }
@@ -46,7 +46,7 @@ class JasController extends Controller
         if ($request->session()->has('jas_session'))
             return redirect('/jasadmin');
         else
-            return view('Admin/jas_login');
+            return view('NiceAdmin/loginjas');
     }
 
     public function keluar(Request $request)

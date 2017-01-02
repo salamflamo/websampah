@@ -33,3 +33,12 @@ semoga projek saya ini bisa membantu menambah nilai PI
 - lihat daftar pengepul
 - mengepul
 - komentar
+- membuat postingan
+- melihat daftar postingan
+
+== Pengepul
+- tabel mengepul
+- mengganti status mengepul
+- lihat statistik mengepul dan menyampah
+- membuat postingan
+- melihat daftar postingan
