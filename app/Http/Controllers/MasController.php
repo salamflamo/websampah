@@ -180,13 +180,11 @@ class MasController extends Controller
 
     public function verif(Request $request)
     {
-        $validate_admin = DB::table('Masyarakat')
-            ->select('id','email','password')
-            ->where('email', Input::get('email'))
-            ->first();
-        if ($validate_admin && Hash::check(Input::get('password'), $validate_admin->password))
+        $masyarakat = DB::table('Masyarakat')->where('email', $request->email)->first();
+        $cek = Hash::check($request->password, $pengepul->password);
+        if ($cek)
         {
-            $request->session()->put('jas_session',$validate_admin->id);
+            $request->session()->put('mas_session',$masyarakat->id);
             return redirect('/masadmin');
         }
         else

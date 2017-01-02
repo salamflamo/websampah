@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dadfc10f-77b5-4081-9d0a-a0b6b7c6cd10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MasController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MasController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/daftar.blade.php" afterPath="$PROJECT_DIR$/resources/views/daftar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <ignored path="sampah.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JasController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="91" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="91" selection-end-column="9" />
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
               </folding>
@@ -41,10 +39,22 @@
       <file leaf-file-name="MasController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="205" column="43" selection-start-line="205" selection-start-column="43" selection-end-line="205" selection-end-column="43" />
+            <state relative-caret-position="383">
+              <caret line="186" column="41" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
               <folding>
                 <element signature="e#40#64#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PengepulController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PengepulController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="68" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="68" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,8 +63,8 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="236" column="90" selection-start-line="236" selection-start-column="90" selection-end-line="236" selection-end-column="90" />
+            <state relative-caret-position="512">
+              <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -340,7 +350,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="web&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;wev&#9;null&#9;null&#10;mas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/MasController.php&#10;jas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/JasController.php&#10;we&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;sa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;sam&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;Mas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/MasController.php&#10;bi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/biografi.blade.php&#10;tab&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/table_posting.blade.php&#10;pos&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/posting.blade.php&#10;bas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;post&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/table_posting.blade.php&#10;bio&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/biografi.blade.php&#10;ba&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;basi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;das&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/dashboard.blade.php&#10;daf&#9;FILE&#9;file:///home/salamander/sampah/resources/views/daftar.blade.php&#10;hom&#9;FILE&#9;file:///home/salamander/sampah/resources/views/home.blade.php&#10;samp&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;fil&#9;null&#9;null&#10;upload&#9;null&#9;null&#10;uploa&#9;FILE&#9;file:///home/salamander/sampah/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;uplo&#9;null&#9;null&#10;mas_&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;table&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;sampa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;login&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/login.blade.php&#10;for&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/forms.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="peng&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/PengepulController.php&#10;web&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;wev&#9;null&#9;null&#10;mas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/MasController.php&#10;jas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/JasController.php&#10;we&#9;FILE&#9;file:///home/salamander/sampah/routes/web.php&#10;sa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;sam&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;Mas&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/MasController.php&#10;bi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/biografi.blade.php&#10;tab&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/table_posting.blade.php&#10;pos&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/posting.blade.php&#10;bas&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;post&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/table_posting.blade.php&#10;bio&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/biografi.blade.php&#10;ba&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;basi&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/basic_table.blade.php&#10;das&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/dashboard.blade.php&#10;daf&#9;FILE&#9;file:///home/salamander/sampah/resources/views/daftar.blade.php&#10;hom&#9;FILE&#9;file:///home/salamander/sampah/resources/views/home.blade.php&#10;samp&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;fil&#9;null&#9;null&#10;upload&#9;null&#9;null&#10;uploa&#9;FILE&#9;file:///home/salamander/sampah/vendor/laravel/framework/src/Illuminate/Http/UploadedFile.php&#10;uplo&#9;null&#9;null&#10;mas_&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;table&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/mas_table.blade.php&#10;sampa&#9;FILE&#9;file:///home/salamander/sampah/app/Http/Controllers/SampahController.php&#10;login&#9;FILE&#9;file:///home/salamander/sampah/resources/views/Admin/login.blade.php&#10;for&#9;FILE&#9;file:///home/salamander/sampah/resources/views/NiceAdmin/forms.blade.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -432,12 +442,12 @@
       <workItem from="1483248593641" duration="15798000" />
       <workItem from="1483271820430" duration="7488000" />
       <workItem from="1483319558589" duration="24193000" />
-      <workItem from="1483353665126" duration="11013000" />
+      <workItem from="1483353665126" duration="12191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187059000" />
+    <option name="totallyTimeSpent" value="188237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="26" width="1370" height="744" extended-state="0" />
@@ -713,16 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PengepulController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="33" column="68" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/dashboardpeng.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -773,16 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="91" column="9" selection-start-line="79" selection-start-column="8" selection-end-line="91" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/NiceAdmin/loginmas.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -807,14 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="236" column="90" selection-start-line="236" selection-start-column="90" selection-end-line="236" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/daftar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -823,10 +805,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PengepulController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="68" selection-start-line="32" selection-start-column="8" selection-end-line="33" selection-end-column="68" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="183" column="12" selection-start-line="183" selection-start-column="12" selection-end-line="183" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MasController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="205" column="43" selection-start-line="205" selection-start-column="43" selection-end-line="205" selection-end-column="43" />
+        <state relative-caret-position="383">
+          <caret line="186" column="41" selection-start-line="186" selection-start-column="41" selection-end-line="186" selection-end-column="41" />
           <folding>
             <element signature="e#40#64#0#PHP" expanded="true" />
           </folding>
