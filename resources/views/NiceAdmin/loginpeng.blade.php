@@ -7,7 +7,7 @@
 
     <div class="container">
 
-      <form class="login-form" method="post" action="/verifpeng">
+      <form class="login-form" method="post" action="{{url('/verifpeng')}}">
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
             <div class="input-group">
