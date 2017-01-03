@@ -6,7 +6,8 @@ use App\Models\Mengepul;
 use App\Models\Menyampah;
 use App\Models\Pengepul;
 use Illuminate\Http\Request;
-
+use PDF;
+use Barryvdh\DomPDF\Facade;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -300,7 +301,7 @@ class SampahController extends Controller
                         ->paginate(3);
             $jummengepul = Mengepul::where('status', 'Lunas')->count();
             $member = Masyarakat::all()->count() + Jasa::all()->count() + Pengepul::all()->count();
-            return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul, 
+            return view('NiceAdmin/transaksiall',['menyampah' => $menyampah, 'mengepul' => $mengepul,
                 'member' => $member, 'jummenyampah' => $jummenyampah, 'jummengepul' => $jummengepul]);
         }
         else
@@ -365,7 +366,7 @@ class SampahController extends Controller
 
 
     //return view biasa
-    
+
 
      public function blank()
      {
@@ -431,7 +432,7 @@ class SampahController extends Controller
 
     }
 
-    
+
     public function Posting(Request $request)
     {
         if ($request->session()->has('session_name'))
@@ -439,11 +440,26 @@ class SampahController extends Controller
         else
             return redirect('/masukadmin');
     }
-
-
 }
 
 
+
+
+
+
+/* untuk membuat pdf aku pisah saja */
+
+// function topdf(Request $request)
+// {
+//     if ($request->session()->has('session_name')) {
+//       $data = Mengepul::all()
+//       $pdf->download('readytopdf');
+//       return view('NiceAdmin/readytopdf',['data' => $data]);
+//     }
+//     else {
+//       return redirect('/masukadmin');
+//     }
+// }
 
 //tidak dipakai
 /*

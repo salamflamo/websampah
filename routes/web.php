@@ -120,6 +120,10 @@ Route::get('/keluarpeng','PengepulController@forget');
 /* punya Artikel */
 
 Route::get('/berita', 'ArtikelController@berita');
+
+
+/* punya pdf */
+Route::get('/adminsampah/topdf','SampahController@topdf');
 /* tidak dipakai */
 
 //Route::get('/sampah', 'SampahController@index');
