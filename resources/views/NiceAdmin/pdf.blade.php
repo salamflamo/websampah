@@ -2,43 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ready To PDF</title>
   </head>
   <body>
-    <h3>Download Laporan Mengepul</h3>
+    <h2>Laporan Menyampah</h2>
     <br><br>
     <table border="1" style="padding: 5px 5px">
       <tr>
-        <td style="padding: 10px 15px">ID</td>
-        <td>
-          Jenis
+        <td style="padding: 10px 15px">
+          Berat
         </td>
         <td>
-          Berat
+          Daerah
         </td>
         <td>
           Nama Pemesan
         </td>
         <td>
-          Status
+          Nama Jasa
         </td>
         <td>
-          Waktu Pesan
+          Status Pengambilan
+        </td>
+        <td>
+          Waktu Menyampah
         </td>
       </tr>
       @foreach($mengepul as $ngepul)
         <tr>
           <td>
-            {{$ngepul->id}}
+            {{$ngepul->berat}} Kg
           </td>
           <td>
-            {{$ngepul->jenis}}
+            {{$ngepul->daerah}}
           </td>
           <td>
-            {{$ngepul->berat}}
+            {{$ngepul->namam}}
           </td>
           <td>
-            {{$ngepul->oleh}}
+            {{$ngepul->namaj}}
           </td>
           <td>
             {{$ngepul->status}}

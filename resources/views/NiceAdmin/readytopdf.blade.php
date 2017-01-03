@@ -8,39 +8,42 @@
     <h2>Ready To PDF</h2>
 
     <a href="{{route('htmltopdf', ['download' => 'pdf'])}}" style="text-decoration: none;">Export to PDF</a>
+    <a href="/adminsampah/transaksi">Home</a>
     <br><br>
     <table border="1" style="padding: 5px 5px">
       <tr>
-        <td style="padding: 10px 15px">ID</td>
-        <td>
-          Jenis
+        <td style="padding: 10px 15px">
+          Berat
         </td>
         <td>
-          Berat
+          Daerah
         </td>
         <td>
           Nama Pemesan
         </td>
         <td>
-          Status
+          Nama Jasa
         </td>
         <td>
-          Waktu Pesan
+          Status Pengambilan
+        </td>
+        <td>
+          Waktu Menyampah
         </td>
       </tr>
       @foreach($mengepul as $ngepul)
         <tr>
           <td>
-            {{$ngepul->id}}
+            {{$ngepul->berat}} Kg
           </td>
           <td>
-            {{$ngepul->jenis}}
+            {{$ngepul->daerah}}
           </td>
           <td>
-            {{$ngepul->berat}}
+            {{$ngepul->namam}}
           </td>
           <td>
-            {{$ngepul->oleh}}
+            {{$ngepul->namaj}}
           </td>
           <td>
             {{$ngepul->status}}
