@@ -28,6 +28,7 @@
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
                                    {{ $post->judul}}
+                                    <div style="float: right;"><a class="btn btn-default" href="/adminsampah/hapusposting/{{$post->id}}">Hapus</a> </div>
                                 </div>
                                 <div class="panel-content">
                                     <img src="/imageartikel/{{$post->gambar}}" style="width: 30%;height: 20%;padding: 10px 10px">

@@ -67,6 +67,7 @@ Route::get('/adminsampah/table/{id}/editjas', 'SampahController@editjas'); //unt
 Route::get('/adminsampah/table/deletemas/{id}', 'SampahController@delete_mas');  //untuk mendelete
 Route::get('/adminsampah/table/deletejas/{id}', 'SampahController@delete_jasa');  //untuk mendelete
 Route::get('/adminsampah/table/deletepeng/{id}', 'SampahController@delete_jasa');  //untuk mendelete
+Route::get('/adminsampah/hapusposting/{id}', 'SampahController@hapusposting');  //untuk mendelete
 Route::get('/adminsampah/daftarposting', 'SampahController@DaftarPosting'); //melihat daftar postingan
 Route::get('/adminsampah/posting', 'SampahController@Posting'); //untuk masuk halaman posting
 Route::get('/adminsampah/transaksi', 'SampahController@transaksi');  //melihat semua transaksi
@@ -114,6 +115,11 @@ Route::get('/pengadmin/tabelposting','PengepulController@DaftarPosting');
 Route::get('/keluarpeng','PengepulController@forget');
 
 
+
+
+/* punya Artikel */
+
+Route::get('/berita', 'ArtikelController@berita');
 /* tidak dipakai */
 
 //Route::get('/sampah', 'SampahController@index');

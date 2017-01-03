@@ -61,6 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li class="active"><a href="/">Home</a></li>
 					<li><a href="#kelebihan" class="scroll hvr-radial-out">Kelebihan</a></li>
 					<li><a href="#daftar" class="scroll hvr-radial-out">Pesan</a></li>
+					<li><a href="/berita" class="hvr-radial-out">Berita</a></li>
 				</ul>
 			</div>
 		</div>

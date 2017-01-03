@@ -356,6 +356,13 @@ class SampahController extends Controller
         return redirect('/adminsampah/table');
     }
 
+    public function hapusposting($id)
+    {
+        $artikel = Artikel::find($id);
+        $artikel->delete();
+        return redirect('/adminsampah/daftarposting');
+    }
+
 
     //return view biasa
     
