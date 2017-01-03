@@ -440,26 +440,31 @@ class SampahController extends Controller
         else
             return redirect('/masukadmin');
     }
+
+    // public function topdf(Request $request)
+    // {
+    //     if ($request->session()->has('session_name')) {
+    //       $data = Mengepul::all();
+    //       return view('NiceAdmin/readytopdf',['data' => $data]);
+    //     }
+    //     else {
+    //       return redirect('/masukadmin');
+    //     }
+    // }
+    //
+    // public function print(Request $request,$pdf)
+    // {
+    //     $data = Mengepul::all();
+    //     dd($pdf->has('pdf'));
+    //     if ($pdf->has('pdf')) {
+    //       $pdf = PDF::loadView('NiceAdmin/readytopdf')->setPaper('a4','landscape');
+    //       return $pdf->download('readytopdf.pdf');
+    //     }
+    // }
 }
-
-
-
-
-
 
 /* untuk membuat pdf aku pisah saja */
 
-// function topdf(Request $request)
-// {
-//     if ($request->session()->has('session_name')) {
-//       $data = Mengepul::all()
-//       $pdf->download('readytopdf');
-//       return view('NiceAdmin/readytopdf',['data' => $data]);
-//     }
-//     else {
-//       return redirect('/masukadmin');
-//     }
-// }
 
 //tidak dipakai
 /*

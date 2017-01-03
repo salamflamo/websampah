@@ -6,12 +6,12 @@
   </head>
   <body>
     <h2>Ready To PDF</h2>
-    
-    <button>Export To PDF</button>
 
-    <table>
+    <a href="{{route('htmltopdf', ['download' => 'pdf'])}}" style="text-decoration: none;">Export to PDF</a>
+    <br><br>
+    <table border="1" style="padding: 5px 5px">
       <tr>
-        <td>ID</td>
+        <td style="padding: 10px 15px">ID</td>
         <td>
           Jenis
         </td>
@@ -28,22 +28,25 @@
           Waktu Pesan
         </td>
       </tr>
-      @foreach($data as $dat)
+      @foreach($mengepul as $ngepul)
         <tr>
           <td>
-            {{$dat->id}}
+            {{$ngepul->id}}
           </td>
           <td>
-            {{$dat->jenis}}
+            {{$ngepul->jenis}}
           </td>
           <td>
-            {{$dat->oleh}}
+            {{$ngepul->berat}}
           </td>
           <td>
-            {{$dat->status}}
+            {{$ngepul->oleh}}
           </td>
           <td>
-            {{$dat->updated_at}}
+            {{$ngepul->status}}
+          </td>
+          <td>
+            {{$ngepul->updated_at}}
           </td>
         </tr>
       @endforeach

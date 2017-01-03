@@ -40,9 +40,9 @@
             <div class="col-lg-8">
                 <section class="panel">
                     <header class="panel-heading tab-bg-primary ">
-                        <!-- <div style="float: right">
+                        <div style="float: right">
                           <a href="/adminsampah/topdf" class="btn btn-primary">To PDF</a>
-                        </div> -->
+                        </div>
                         <ul class="nav nav-tabs">
                             <li class="active">
                                 <a data-toggle="tab" href="#menyampah">Menyampah</a>

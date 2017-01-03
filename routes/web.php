@@ -123,7 +123,7 @@ Route::get('/berita', 'ArtikelController@berita');
 
 
 /* punya pdf */
-Route::get('/adminsampah/topdf','SampahController@topdf');
+Route::get('/adminsampah/topdf',array('as' => 'htmltopdf','uses' => 'PDFController@readytopdf' ));
 /* tidak dipakai */
 
 //Route::get('/sampah', 'SampahController@index');
