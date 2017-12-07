@@ -3,9 +3,9 @@
 Bismillah, dengan ini saya nyatakan membangun web sampah guna memenuhi projek PI
 semoga projek saya ini bisa membantu menambah nilai PI
 
-== Ini requirements nya ==
+## Ini requirements nya 
 
-== Admin
+## Admin
 - tabel semua member
 - daftar postingan
 - daftar komentar
@@ -15,7 +15,7 @@ semoga projek saya ini bisa membantu menambah nilai PI
 - hapus semua member
 - edit semua member
 
-== Masyarakat
+## Masyarakat
 - tabel menyampah
 - lihat profil
 - edit profil
@@ -24,7 +24,7 @@ semoga projek saya ini bisa membantu menambah nilai PI
 - lihat daftar pengepul
 - mengepul
 
-== Jasa
+## Jasa
 - tabel menyampah
 - lihat profil
 - edit profil
@@ -35,7 +35,7 @@ semoga projek saya ini bisa membantu menambah nilai PI
 - membuat postingan
 - melihat daftar postingan
 
-== Pengepul
+## Pengepul
 - tabel mengepul
 - mengganti status mengepul
 - lihat statistik mengepul dan menyampah
