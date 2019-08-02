@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Get all folders and files inside root folders"
+files=`ls -a`
+
+echo "Create private folder"
+mkdir private
+
+echo "Move all show and hide folders and files into private folder"
+for ff in $files;
+do
+    if [ $ff == "public" ]; then continue; elif [ $ff == "private" ];then continue; fi
+    mv $ff private/
+done
+
+echo "Get all folders and files inside public folder"
+publics=`ls -a public/`
+
+echo "Move all show and hide folders and files into root folder"
+for pub in $publics;
+do
+    mv $pub ./
+done
