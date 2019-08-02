@@ -6,29 +6,29 @@
 #     if [ ! -z $check_public ];then root_folder=`pwd`;break;else echo "Move outside"; cd ..;fi
 # done
 
-echo "root folder is $root_folder"
-cd $root_folder
+# echo "root folder is $root_folder"
+# cd $root_folder
 
-echo "Get all folders and files inside root folders"
-files=`ls -a`
+# echo "Get all folders and files inside root folders"
+# files=`ls -a`
 
-echo "Create private folder"
-mkdir private
+# echo "Create private folder"
+# mkdir private
 
-echo "Move all show and hide folders and files into private folder"
-for ff in $files;
-do
-    if [ $ff == "public" ]; then continue; elif [ $ff == "private" ];then continue; elif [ $ff == ".s2i" ]; then continue; fi
-    mv $ff private
-done
+# echo "Move all show and hide folders and files into private folder"
+# for ff in $files;
+# do
+#     if [ $ff == "public" ]; then continue; elif [ $ff == "private" ];then continue; elif [ $ff == ".s2i" ]; then continue; fi
+#     mv $ff private
+# done
 
-echo "Get all folders and files inside public folder"
-publics=`ls -a public`
+# echo "Get all folders and files inside public folder"
+# publics=`ls -a public`
 
-echo "Move all show and hide folders and files into root folder"
-for pub in $publics;
-do
-    mv public/$pub ./
-done
+# echo "Move all show and hide folders and files into root folder"
+# for pub in $publics;
+# do
+#     mv public/$pub ./
+# done
 
-rm -r public/
+# rm -r public/
