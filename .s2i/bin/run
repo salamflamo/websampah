@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cek=`ps -aux | grep artisan | awk '{print $2}'`
+
+if [ -z $cek ];then php artisan serve --port=8080;fi
