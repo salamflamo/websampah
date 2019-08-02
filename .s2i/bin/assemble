@@ -1,5 +1,14 @@
 #!/bin/bash
 
+while (true);
+do
+    check_public=`ls | grep public`
+    if [ ! -z $check_public ];then root_folder=`pwd`;break;else echo "Move outside"; cd ..;fi
+done
+
+echo "root folder is $root_folder"
+cd $root_folder
+
 echo "Get all folders and files inside root folders"
 files=`ls -a`
 
@@ -9,15 +18,17 @@ mkdir private
 echo "Move all show and hide folders and files into private folder"
 for ff in $files;
 do
-    if [ $ff == "public" ]; then continue; elif [ $ff == "private" ];then continue; fi
-    mv $ff private/
+    if [ $ff == "public" ]; then continue; elif [ $ff == "private" ];then continue; elif [ $ff == ".s2i" ]; then continue; fi
+    mv $ff private
 done
 
 echo "Get all folders and files inside public folder"
-publics=`ls -a public/`
+publics=`ls -a public`
 
 echo "Move all show and hide folders and files into root folder"
 for pub in $publics;
 do
-    mv $pub ./
+    mv public/$pub ./
 done
+
+rm -r public/

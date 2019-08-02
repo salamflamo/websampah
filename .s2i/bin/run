@@ -2,6 +2,6 @@
 
 #cek=`ps -aux | grep artisan | awk '{print $2}'`
 
-#if [ -z $cek ];then php artisan serve --port=8080;fi
+#if [ -z $cek ];then php artisan serve --port=80;fi
 
 echo "Application run with index.php file"
